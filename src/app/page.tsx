@@ -1,34 +1,243 @@
-import { CallToAction } from "@/components/ui/CallToAction"
-import FeatureDivider from "@/components/ui/FeatureDivider"
-import Features from "@/components/ui/Features"
-import { Hero } from "@/components/ui/Hero"
-import { Map } from "@/components/ui/Map/Map"
-import { SolarAnalytics } from "@/components/ui/SolarAnalytics"
-import Testimonial from "@/components/ui/Testimonial"
+import Link from "next/link"
 
 export default function Home() {
   return (
     <main className="relative mx-auto flex flex-col">
-      <div className="pt-56">
-        <Hero />
-      </div>
-      <div className="mt-52 px-4 xl:px-0">
-        <Features />
-      </div>
-      <div className="mt-32 px-4 xl:px-0">
-        <Testimonial />
-      </div>
-      <FeatureDivider className="my-16 max-w-6xl" />
-      <div className="px-4 xl:px-0">
-        <Map />
-      </div>
-      <FeatureDivider className="my-16 max-w-6xl" />
-      <div className="mt-12 mb-40 px-4 xl:px-0">
-        <SolarAnalytics />
-      </div>
-      <div className="mt-10 mb-40 px-4 xl:px-0">
-        <CallToAction />
-      </div>
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-4 xl:px-0">
+        <div className="max-w-6xl mx-auto">
+          <div className="max-w-3xl mx-auto text-center space-y-6">
+            <h1 className="text-5xl font-bold text-sage-900 md:text-6xl lg:text-7xl">
+              Professional Plant Pathogen Testing
+            </h1>
+            <p className="text-xl text-sage-700 leading-relaxed">
+              Accurate, timely diagnostic services for South African
+              agriculture. Protect your crops with expert pathogen detection and
+              analysis.
+            </p>
+            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center pt-4">
+              <Link
+                href="/pathogen-testing"
+                className="inline-flex items-center justify-center rounded-md bg-sage-600 px-8 py-4 font-semibold text-white transition-colors hover:bg-sage-700"
+              >
+                Our Services
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-md border border-sage-300 bg-white px-8 py-4 font-semibold text-sage-900 transition-colors hover:bg-sage-50"
+              >
+                Get in Touch
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 xl:px-0 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-sage-900 md:text-4xl">
+              Comprehensive Testing Services
+            </h2>
+            <p className="mt-4 text-lg text-sage-700">
+              Detect and identify the pathogens affecting your crops
+            </p>
+          </div>
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="rounded-lg border border-sage-200 p-8 bg-cream-50">
+              <div className="mb-4">
+                <svg
+                  className="h-12 w-12 text-sage-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-sage-900 mb-3">
+                Fungal Pathogens
+              </h3>
+              <p className="text-sage-700">
+                Accurate detection of fungal diseases including blights, mildew,
+                and rust affecting your crops.
+              </p>
+            </div>
+
+            <div className="rounded-lg border border-sage-200 p-8 bg-cream-50">
+              <div className="mb-4">
+                <svg
+                  className="h-12 w-12 text-sage-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-sage-900 mb-3">
+                Bacterial Diseases
+              </h3>
+              <p className="text-sage-700">
+                Screening for bacterial pathogens that can devastate crops if
+                left undetected.
+              </p>
+            </div>
+
+            <div className="rounded-lg border border-sage-200 p-8 bg-cream-50">
+              <div className="mb-4">
+                <svg
+                  className="h-12 w-12 text-sage-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-sage-900 mb-3">
+                Viral Infections
+              </h3>
+              <p className="text-sage-700">
+                Molecular testing for viral diseases to help you identify and
+                manage infections early.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Section */}
+      <section className="py-20 px-4 xl:px-0">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-sage-900 md:text-4xl">
+                Why Choose Mycelico
+              </h2>
+              <div className="space-y-4">
+                <div className="flex gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sage-100 text-sage-800">
+                    <svg
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-sage-900 mb-1">
+                      Fast Turnaround
+                    </h3>
+                    <p className="text-sage-700">
+                      Get results when you need them to make timely crop
+                      management decisions.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sage-100 text-sage-800">
+                    <svg
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-sage-900 mb-1">
+                      Local Expertise
+                    </h3>
+                    <p className="text-sage-700">
+                      Based in South Africa, we understand the pathogen
+                      challenges facing local producers.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sage-100 text-sage-800">
+                    <svg
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-sage-900 mb-1">
+                      Reliable Results
+                    </h3>
+                    <p className="text-sage-700">
+                      Proven diagnostic methods ensure accurate, actionable
+                      information for your operation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-lg border border-sage-200 bg-sage-50 p-8 shadow-sm">
+              <h3 className="text-2xl font-semibold text-sage-900 mb-4">
+                Ready to protect your crops?
+              </h3>
+              <p className="text-sage-700 mb-6">
+                Contact us today to discuss your pathogen testing needs or
+                request a quote for your operation.
+              </p>
+              <div className="flex flex-col gap-3">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-md bg-sage-600 px-6 py-3 font-medium text-white transition-colors hover:bg-sage-700"
+                >
+                  Contact Us
+                </Link>
+                <Link
+                  href="/pricing"
+                  className="inline-flex items-center justify-center rounded-md border border-sage-300 bg-white px-6 py-3 font-medium text-sage-900 transition-colors hover:bg-sage-50"
+                >
+                  View Pricing
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }
