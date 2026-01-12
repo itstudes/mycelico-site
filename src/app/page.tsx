@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { MycelicoMark } from "../../public/MycelicoMark"
 
 export default function Home() {
   return (
@@ -45,76 +46,70 @@ export default function Home() {
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
-            <div className="rounded-lg border border-sage-200 p-8 bg-cream-50">
-              <div className="mb-4">
-                <svg
-                  className="h-12 w-12 text-sage-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+            <div className="rounded-lg border border-sage-200 p-8 bg-cream-50 hover:shadow-md transition-shadow">
+              <div className="mb-4 flex justify-center">
+                <div className="rounded-full bg-sage-100 p-4">
+                  <MycelicoMark className="h-12 w-12" />
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-sage-900 mb-3">
+              <h3 className="text-xl font-semibold text-sage-900 mb-3 text-center">
                 Fungal Pathogens
               </h3>
-              <p className="text-sage-700">
+              <p className="text-sage-700 text-center">
                 Accurate detection of fungal diseases including blights, mildew,
                 and rust affecting your crops.
               </p>
             </div>
 
-            <div className="rounded-lg border border-sage-200 p-8 bg-cream-50">
-              <div className="mb-4">
-                <svg
-                  className="h-12 w-12 text-sage-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                  />
-                </svg>
+            <div className="rounded-lg border border-sage-200 p-8 bg-cream-50 hover:shadow-md transition-shadow">
+              <div className="mb-4 flex justify-center">
+                <div className="rounded-full bg-lavender-100 p-4">
+                  <svg
+                    className="h-12 w-12 text-lavender-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                    />
+                  </svg>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-sage-900 mb-3">
+              <h3 className="text-xl font-semibold text-sage-900 mb-3 text-center">
                 Bacterial Diseases
               </h3>
-              <p className="text-sage-700">
+              <p className="text-sage-700 text-center">
                 Screening for bacterial pathogens that can devastate crops if
                 left undetected.
               </p>
             </div>
 
-            <div className="rounded-lg border border-sage-200 p-8 bg-cream-50">
-              <div className="mb-4">
-                <svg
-                  className="h-12 w-12 text-sage-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
+            <div className="rounded-lg border border-sage-200 p-8 bg-cream-50 hover:shadow-md transition-shadow">
+              <div className="mb-4 flex justify-center">
+                <div className="rounded-full bg-sky-100 p-4">
+                  <svg
+                    className="h-12 w-12 text-sky-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                    />
+                  </svg>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-sage-900 mb-3">
+              <h3 className="text-xl font-semibold text-sage-900 mb-3 text-center">
                 Viral Infections
               </h3>
-              <p className="text-sage-700">
+              <p className="text-sage-700 text-center">
                 Molecular testing for viral diseases to help you identify and
                 manage infections early.
               </p>
