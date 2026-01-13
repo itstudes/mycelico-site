@@ -13,7 +13,7 @@ export default function ContactPage() {
     return (
         <PageWrapper>
             <div className="relative space-y-8 max-w-4xl mx-auto overflow-hidden">
-                <VerticalDottedLines variant="minimal" />
+                <VerticalDottedLines />
 
                 <div className="relative z-10 space-y-4 text-center">
                     <h1 className="text-4xl font-bold text-sage-900 md:text-5xl">

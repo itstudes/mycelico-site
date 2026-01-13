@@ -33,7 +33,7 @@ export default function PricingPage() {
     return (
         <PageWrapper>
             <div className="relative space-y-8 overflow-hidden">
-                <VerticalDottedLines variant="minimal" />
+                <VerticalDottedLines />
 
                 <div className="space-y-4 text-center relative z-10">
                     <div className="mb-6 flex justify-center">

@@ -1,10 +1,5 @@
 interface VerticalDottedLinesProps {
     /**
-     * Show 5 lines (left, 25%, center, 75%, right) or just 3 (left, center, right)
-     * @default "full"
-     */
-    variant?: "full" | "minimal"
-    /**
      * Stroke color class (Tailwind)
      * @default "stroke-sage-300"
      */
@@ -12,7 +7,6 @@ interface VerticalDottedLinesProps {
 }
 
 export function VerticalDottedLines({
-    variant = "full",
     strokeClass = "stroke-sage-300",
 }: VerticalDottedLinesProps) {
     const lineStyle = {
@@ -21,7 +15,10 @@ export function VerticalDottedLines({
     }
 
     const Line = ({ className }: { className?: string }) => (
-        <div className={`absolute inset-y-0 -my-20 w-px ${className ?? ""}`} style={lineStyle}>
+        <div
+            className={`absolute inset-y-0 -my-20 w-px ${className ?? ""}`}
+            style={lineStyle}
+        >
             <svg className="h-full w-full" preserveAspectRatio="none">
                 <line
                     x1="0"
@@ -37,22 +34,11 @@ export function VerticalDottedLines({
     )
 
     return (
-        <div className="pointer-events-none absolute inset-0 select-none overflow-hidden">
-            {/* Left */}
+        <div className="pointer-events-none absolute inset-x-4 inset-y-0 sm:inset-x-8 select-none overflow-hidden">
+            {/* Left edge */}
             <Line className="left-0" />
-            {/* Right */}
+            {/* Right edge */}
             <Line className="right-0" />
-            {/* Center */}
-            <Line className="-z-10 left-1/2" />
-
-            {variant === "full" && (
-                <>
-                    {/* 25% */}
-                    <Line className="-z-10 left-1/4 hidden sm:block" />
-                    {/* 75% */}
-                    <Line className="-z-10 left-3/4 hidden sm:block" />
-                </>
-            )}
         </div>
     )
 }

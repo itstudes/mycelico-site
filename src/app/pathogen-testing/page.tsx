@@ -1,101 +1,69 @@
 import { PageWrapper } from "@/components/PageWrapper"
 import { DiagonalHatching } from "@/components/ui/DiagonalHatching"
+import { TestTypeCard } from "@/components/ui/TestTypeCard"
 import { VerticalDottedLines } from "@/components/ui/VerticalDottedLines"
+import {
+    RiBugLine,
+    RiDropLine,
+    RiPlantLine,
+    RiVirusLine,
+} from "@remixicon/react"
 import type { Metadata } from "next"
 import Link from "next/link"
-import { MycelicoMark } from "../../../public/MycelicoMark"
 
 export const metadata: Metadata = {
     title: "Pathogen Testing Services | Mycelico",
     description:
-        "Accurate plant pathogen testing for South African agriculture. Fast turnaround, reliable results, and expert analysis to protect your crops.",
+        "Accurate plant pathogen testing for South African agriculture. HLVd testing available now. Phytophthora, Pythium, and Fusarium testing coming soon.",
 }
 
 export default function PathogenTestingPage() {
     return (
         <PageWrapper>
             <div className="relative space-y-8 overflow-hidden">
-                <VerticalDottedLines variant="full" />
+                <VerticalDottedLines />
 
                 <div className="relative z-10 space-y-4">
                     <h1 className="text-4xl font-bold text-sage-900 md:text-5xl">
                         Pathogen Testing Services
                     </h1>
                     <p className="text-lg text-sage-700 max-w-3xl">
-                        Comprehensive plant pathogen testing services designed for South
-                        African agricultural producers. We provide accurate, timely results
-                        to help you make informed decisions about crop health management.
+                        Molecular diagnostic services for South African agricultural
+                        producers. We use advanced laboratory techniques to provide
+                        accurate, timely results that help you make informed decisions about
+                        crop health management.
                     </p>
                 </div>
 
-                <div className="relative z-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-12">
-                    <div className="rounded-lg border border-sage-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
-                        <div className="mb-4 flex justify-center">
-                            <div className="rounded-full bg-lime-100 p-3">
-                                <MycelicoMark className="h-10 w-10" />
-                            </div>
-                        </div>
-                        <h2 className="text-xl font-semibold text-sage-900 mb-3 text-center">
-                            Fungal Pathogens
-                        </h2>
-                        <p className="text-sage-600 text-center">
-                            Detection and identification of fungal diseases affecting crops,
-                            including early blight, late blight, and powdery mildew.
-                        </p>
-                    </div>
-
-                    <div className="rounded-lg border border-sage-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
-                        <div className="mb-4 flex justify-center">
-                            <div className="rounded-full bg-lavender-100 p-3">
-                                <svg
-                                    className="h-10 w-10 text-lavender-600"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-                                    />
-                                </svg>
-                            </div>
-                        </div>
-                        <h2 className="text-xl font-semibold text-sage-900 mb-3 text-center">
-                            Bacterial Diseases
-                        </h2>
-                        <p className="text-sage-600 text-center">
-                            Screening for bacterial pathogens that can devastate crops,
-                            including bacterial spot, canker, and wilt diseases.
-                        </p>
-                    </div>
-
-                    <div className="rounded-lg border border-sage-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
-                        <div className="mb-4 flex justify-center">
-                            <div className="rounded-full bg-sky-100 p-3">
-                                <svg
-                                    className="h-10 w-10 text-sky-600"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M13 10V3L4 14h7v7l9-11h-7z"
-                                    />
-                                </svg>
-                            </div>
-                        </div>
-                        <h2 className="text-xl font-semibold text-sage-900 mb-3 text-center">
-                            Viral Infections
-                        </h2>
-                        <p className="text-sage-600 text-center">
-                            Molecular testing to identify viral infections before they spread
-                            throughout your operation.
-                        </p>
+                {/* Testing Types - StickerCard style */}
+                <div className="relative z-10 mt-12">
+                    <h2 className="text-2xl font-semibold text-sage-900 mb-6">
+                        Available Testing Services
+                    </h2>
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                        <TestTypeCard
+                            Icon={RiVirusLine}
+                            title="HLVd Testing"
+                            description="Hop Latent Viroid detection for any crop type. Identify infections early before they spread."
+                        />
+                        <TestTypeCard
+                            Icon={RiDropLine}
+                            title="Phytophthora"
+                            description="Water mould pathogen testing for root rot and crown rot diseases."
+                            comingSoon
+                        />
+                        <TestTypeCard
+                            Icon={RiPlantLine}
+                            title="Pythium"
+                            description="Root rot and damping-off disease detection for seedlings and mature plants."
+                            comingSoon
+                        />
+                        <TestTypeCard
+                            Icon={RiBugLine}
+                            title="Fusarium"
+                            description="Fusarium wilt and root rot testing across a range of crop species."
+                            comingSoon
+                        />
                     </div>
                 </div>
 
@@ -127,7 +95,7 @@ export default function PathogenTestingPage() {
                                     Laboratory Analysis
                                 </h3>
                                 <p className="text-sage-600">
-                                    Our team uses advanced diagnostic techniques to identify
+                                    Our team uses advanced molecular techniques to identify
                                     pathogens accurately.
                                 </p>
                             </div>
@@ -138,11 +106,11 @@ export default function PathogenTestingPage() {
                             </div>
                             <div>
                                 <h3 className="font-medium text-sage-900 mb-1">
-                                    Results & Recommendations
+                                    Results & Insights
                                 </h3>
                                 <p className="text-sage-600">
-                                    Receive detailed reports with actionable insights for managing
-                                    identified threats.
+                                    Receive clear, visual reports that empower you to make
+                                    informed decisions about your operation.
                                 </p>
                             </div>
                         </div>

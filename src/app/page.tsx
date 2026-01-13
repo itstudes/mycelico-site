@@ -9,7 +9,7 @@ export default function Home() {
     <main className="relative mx-auto flex flex-col">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 xl:px-0 overflow-hidden">
-        <VerticalDottedLines variant="minimal" />
+        <VerticalDottedLines />
         <div className="max-w-6xl mx-auto">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
             <div className="space-y-6 text-center lg:text-left">
@@ -50,7 +50,7 @@ export default function Home() {
 
       {/* Features Section */}
       <section className="relative py-20 px-4 xl:px-0 bg-white overflow-hidden">
-        <VerticalDottedLines variant="full" />
+        <VerticalDottedLines />
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-sage-900 md:text-4xl">
