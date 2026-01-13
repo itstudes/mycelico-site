@@ -1,7 +1,8 @@
 export const siteConfig = {
-  name: "Solar Technologies",
-  url: "https://solar.tremor.so",
-  description: "Automation for every Farm.",
+  name: "Mycelico",
+  url: "https://mycelico.co.za",
+  description:
+    "Professional plant pathogen testing services for South African agriculture. Fast, accurate diagnostic services for crop disease detection and management.",
   baseLinks: {
     home: "/",
   },

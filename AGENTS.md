@@ -236,6 +236,79 @@ Design priorities:
 * **Credibility**: scientific/process explanations without exaggeration.
 * **Conversion**: clear calls to action.
 
+### Color Palette & Styling
+
+The website uses a natural, organic color palette that reflects the agricultural and biological nature of the business:
+
+**Primary Brand Color:**
+* Lime Green (#6b8c37, #7a9c38, #668729) - Used for primary CTAs, accents, and interactive elements
+* Darker variants (#476a32, #3d572c) - For hover states and emphasis
+
+**Supporting Colors:**
+* Sage greens - Neutral backgrounds and subtle accents
+* Lavender - Secondary accents for variety
+* Sky blues - Highlights and informational elements
+* Cream/beige tones - Base backgrounds and warmth
+
+**Color Usage Guidelines:**
+* Primary CTAs (buttons, links): Lime green (`bg-lime-600`, `hover:bg-lime-700`)
+* Secondary actions: Sage with borders (`border-sage-300 bg-white`)
+* Text: Dark sage for body (`text-sage-900`, `text-sage-700`)
+* Backgrounds: Cream (`bg-cream-50`) for page, white for cards
+* Selection: Lime green backgrounds (`selection:bg-lime-100 selection:text-lime-800`)
+
+### Typography
+
+**Primary Font:** Raleway (Google Fonts)
+* Weights used: 300 (Light), 400 (Regular), 500 (Medium), 600 (Semi-Bold), 700 (Bold)
+* Body text: 300 (Light) for readability
+* Headings: 600-700 for impact
+* Letter spacing: Tight on headings (-0.02em to -0.03em)
+
+**Font Guidelines:**
+* Headings (h1-h6): Raleway Semi-Bold (600) or Bold (700)
+* Body text: Raleway Light (300)
+* Buttons/CTAs: Raleway Medium (500) or Semi-Bold (600)
+* Use `font-semibold` for emphasis, not `font-bold` in body text
+
+### Visual Assets & Imagery
+
+**Logo Usage:**
+* `/public/logo-full.png` - Full logo with text (navbar, footer)
+* `/public/logo.png` - Icon/mark only (pricing page, decorative elements, mobile)
+
+**Image Style:**
+* Aerial agriculture photography - Fields, crops, farmland from above
+* Cellular/microscopy imagery - Pathogens, cells, laboratory visuals
+* Natural, organic feel - Avoid overly polished or stock-photo aesthetic
+* Muted, desaturated tones that complement the pastel color palette
+
+**Image Filters/Effects (when applicable):**
+* Slight desaturation (85-90%) to maintain consistency with pastel theme
+* Warm color cast (+5-10 temperature) to align with cream/beige tones
+* Soft vignette for focus
+* Avoid high contrast - keep images soft and approachable
+
+### Component Styling Patterns
+
+**Cards:**
+* White background (`bg-white`)
+* Subtle border (`border border-sage-200`)
+* Light shadow (`shadow-sm`)
+* Hover effect (`hover:shadow-md transition-shadow`)
+* Rounded corners (`rounded-lg`)
+
+**Buttons:**
+* Primary: `bg-lime-600 hover:bg-lime-700 text-white shadow-sm`
+* Secondary: `border border-sage-300 bg-white text-sage-900 hover:bg-sage-50 shadow-sm`
+* Always include subtle shadows for depth
+* Use `transition-colors` for smooth hover states
+
+**Icons & Decorative Elements:**
+* Colored backgrounds: `bg-lime-100`, `bg-sage-100`, `bg-lavender-100`, `bg-sky-100`
+* Icon colors match background theme (`text-lime-600`, `text-sage-600`, etc.)
+* Circular containers: `rounded-full p-3` or `p-4`
+
 ### Accessibility
 
 * Use semantic HTML.
