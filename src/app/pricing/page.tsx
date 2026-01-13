@@ -1,5 +1,6 @@
 import { PageWrapper } from "@/components/PageWrapper"
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -13,6 +14,15 @@ export default function PricingPage() {
         <PageWrapper>
             <div className="space-y-8">
                 <div className="space-y-4 text-center">
+                    <div className="flex justify-center mb-6">
+                        <Image
+                            src="/logo.png"
+                            alt="Mycelico"
+                            width={80}
+                            height={80}
+                            className="h-20 w-auto"
+                        />
+                    </div>
                     <h1 className="text-4xl font-bold text-sage-900 md:text-5xl">
                         Pricing
                     </h1>

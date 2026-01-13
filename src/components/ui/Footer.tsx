@@ -1,6 +1,6 @@
 import { RiLinkedinFill, RiMailFill, RiTwitterXFill } from "@remixicon/react"
+import Image from "next/image"
 import Link from "next/link"
-import { MycelicoLogo } from "../../../public/MycelicoLogo"
 const CURRENT_YEAR = new Date().getFullYear()
 
 const Footer = () => {
@@ -34,7 +34,13 @@ const Footer = () => {
               href="/"
               className="flex items-center font-medium text-sage-700 select-none mb-4"
             >
-              <MycelicoLogo className="w-28" />
+              <Image
+                src="/logo-full.png"
+                alt="Mycelico"
+                width={120}
+                height={35}
+                className="h-8 w-auto"
+              />
               <span className="sr-only">Mycelico Logo (go home)</span>
             </Link>
             <p className="text-sm text-sage-600 mb-4 max-w-md">

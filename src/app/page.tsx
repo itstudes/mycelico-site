@@ -19,13 +19,13 @@ export default function Home() {
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center pt-4">
               <Link
                 href="/pathogen-testing"
-                className="inline-flex items-center justify-center rounded-md bg-sage-600 px-8 py-4 font-semibold text-white transition-colors hover:bg-sage-700"
+                className="inline-flex items-center justify-center rounded-md bg-lime-600 px-8 py-4 font-semibold text-white transition-colors hover:bg-lime-700 shadow-sm"
               >
                 Our Services
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-md border border-sage-300 bg-white px-8 py-4 font-semibold text-sage-900 transition-colors hover:bg-sage-50"
+                className="inline-flex items-center justify-center rounded-md border border-sage-300 bg-white px-8 py-4 font-semibold text-sage-900 transition-colors hover:bg-sage-50 shadow-sm"
               >
                 Get in Touch
               </Link>
@@ -218,7 +218,7 @@ export default function Home() {
               <div className="flex flex-col gap-3">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-md bg-sage-600 px-6 py-3 font-medium text-white transition-colors hover:bg-sage-700"
+                  className="inline-flex items-center justify-center rounded-md bg-lime-600 px-6 py-3 font-medium text-white transition-colors hover:bg-lime-700 shadow-sm"
                 >
                   Contact Us
                 </Link>

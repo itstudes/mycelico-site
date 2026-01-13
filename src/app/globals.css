@@ -13,6 +13,18 @@
   --color-sage-800: #394d43;
   --color-sage-900: #2f4038;
 
+  /* Lime Green Accents - Primary Brand Color */
+  --color-lime-50: #f7faf3;
+  --color-lime-100: #ecf4e1;
+  --color-lime-200: #dae9c8;
+  --color-lime-300: #b8d99a;
+  --color-lime-400: #95c56d;
+  --color-lime-500: #7a9c38;
+  --color-lime-600: #6b8c37;
+  --color-lime-700: #668729;
+  --color-lime-800: #476a32;
+  --color-lime-900: #3d572c;
+
   --color-lavender-50: #f7f6fb;
   --color-lavender-100: #ede9f7;
   --color-lavender-200: #dcd7ef;
@@ -232,7 +244,7 @@
   h4,
   h5,
   h6 {
-    font-family: var(--font-heading), sans-serif;
+    font-family: var(--font-raleway), sans-serif;
     font-weight: 600;
     letter-spacing: -0.02em;
   }
@@ -240,6 +252,15 @@
   h1 {
     font-weight: 700;
     letter-spacing: -0.03em;
+  }
+
+  body {
+    font-weight: 300;
+  }
+
+  strong,
+  b {
+    font-weight: 600;
   }
 }
 
