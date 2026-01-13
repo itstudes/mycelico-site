@@ -1,4 +1,5 @@
 import { PageWrapper } from "@/components/PageWrapper"
+import { VerticalDottedLines } from "@/components/ui/VerticalDottedLines"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -10,8 +11,9 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <PageWrapper>
-            <div className="space-y-12">
-                <div className="space-y-4">
+            <div className="relative space-y-12 overflow-hidden">
+                <VerticalDottedLines variant="minimal" />
+                <div className="relative z-10 space-y-4">
                     <h1 className="text-4xl font-bold text-sage-900 md:text-5xl">
                         About Mycelico
                     </h1>
@@ -21,7 +23,7 @@ export default function AboutPage() {
                     </p>
                 </div>
 
-                <div className="prose prose-sage max-w-3xl">
+                <div className="relative z-10 prose prose-sage max-w-3xl">
                     <h2 className="text-2xl font-semibold text-sage-900">Our Mission</h2>
                     <p className="text-sage-700 leading-relaxed">
                         Mycelico is dedicated to supporting the South African agricultural
@@ -31,7 +33,7 @@ export default function AboutPage() {
                     </p>
                 </div>
 
-                <div className="prose prose-sage max-w-3xl">
+                <div className="relative z-10 prose prose-sage max-w-3xl">
                     <h2 className="text-2xl font-semibold text-sage-900">What We Do</h2>
                     <p className="text-sage-700 leading-relaxed">
                         We offer comprehensive diagnostic services for detecting fungal,
@@ -41,7 +43,7 @@ export default function AboutPage() {
                     </p>
                 </div>
 
-                <div className="rounded-lg border border-sage-200 bg-white p-8 shadow-sm">
+                <div className="relative z-10 rounded-lg border border-sage-200 bg-white p-8 shadow-sm">
                     <h2 className="text-2xl font-semibold text-sage-900 mb-6">
                         Why Choose Mycelico
                     </h2>
@@ -85,7 +87,7 @@ export default function AboutPage() {
                     </div>
                 </div>
 
-                <div className="prose prose-sage max-w-3xl">
+                <div className="relative z-10 prose prose-sage max-w-3xl">
                     <h2 className="text-2xl font-semibold text-sage-900">
                         Serving South African Agriculture
                     </h2>

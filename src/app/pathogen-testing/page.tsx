@@ -1,4 +1,6 @@
 import { PageWrapper } from "@/components/PageWrapper"
+import { DiagonalHatching } from "@/components/ui/DiagonalHatching"
+import { VerticalDottedLines } from "@/components/ui/VerticalDottedLines"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { MycelicoMark } from "../../../public/MycelicoMark"
@@ -12,8 +14,10 @@ export const metadata: Metadata = {
 export default function PathogenTestingPage() {
     return (
         <PageWrapper>
-            <div className="space-y-8">
-                <div className="space-y-4">
+            <div className="relative space-y-8 overflow-hidden">
+                <VerticalDottedLines variant="full" />
+
+                <div className="relative z-10 space-y-4">
                     <h1 className="text-4xl font-bold text-sage-900 md:text-5xl">
                         Pathogen Testing Services
                     </h1>
@@ -24,10 +28,10 @@ export default function PathogenTestingPage() {
                     </p>
                 </div>
 
-                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-12">
+                <div className="relative z-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-12">
                     <div className="rounded-lg border border-sage-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
                         <div className="mb-4 flex justify-center">
-                            <div className="rounded-full bg-sage-100 p-3">
+                            <div className="rounded-full bg-lime-100 p-3">
                                 <MycelicoMark className="h-10 w-10" />
                             </div>
                         </div>
@@ -89,18 +93,19 @@ export default function PathogenTestingPage() {
                             Viral Infections
                         </h2>
                         <p className="text-sage-600 text-center">
-                            infections before they spread throughout your operation.
+                            Molecular testing to identify viral infections before they spread
+                            throughout your operation.
                         </p>
                     </div>
                 </div>
 
-                <div className="mt-12 space-y-6">
+                <div className="relative z-10 mt-12 space-y-6">
                     <h2 className="text-2xl font-semibold text-sage-900">
                         Our Testing Process
                     </h2>
                     <div className="space-y-4">
                         <div className="flex gap-4">
-                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sage-100 text-sage-800 font-semibold">
+                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-lime-100 text-lime-800 font-semibold">
                                 1
                             </div>
                             <div>
@@ -114,7 +119,7 @@ export default function PathogenTestingPage() {
                             </div>
                         </div>
                         <div className="flex gap-4">
-                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sage-100 text-sage-800 font-semibold">
+                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-lime-100 text-lime-800 font-semibold">
                                 2
                             </div>
                             <div>
@@ -128,7 +133,7 @@ export default function PathogenTestingPage() {
                             </div>
                         </div>
                         <div className="flex gap-4">
-                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sage-100 text-sage-800 font-semibold">
+                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-lime-100 text-lime-800 font-semibold">
                                 3
                             </div>
                             <div>
@@ -144,26 +149,33 @@ export default function PathogenTestingPage() {
                     </div>
                 </div>
 
-                <div className="mt-12 rounded-lg bg-sage-50 border border-sage-200 p-8">
-                    <h2 className="text-2xl font-semibold text-sage-900 mb-4">
-                        Ready to Get Started?
-                    </h2>
-                    <p className="text-sage-700 mb-6">
-                        Contact us to discuss your testing needs or request a quote.
-                    </p>
-                    <div className="flex flex-col gap-4 sm:flex-row">
-                        <Link
-                            href="/contact"
-                            className="inline-flex items-center justify-center rounded-md bg-sage-600 px-6 py-3 font-medium text-white transition-colors hover:bg-sage-700"
-                        >
-                            Contact Us
-                        </Link>
-                        <Link
-                            href="/pricing"
-                            className="inline-flex items-center justify-center rounded-md border border-sage-300 bg-white px-6 py-3 font-medium text-sage-900 transition-colors hover:bg-sage-50"
-                        >
-                            View Pricing
-                        </Link>
+                <div className="relative z-10 mt-12 rounded-lg bg-lime-50 border border-lime-200 p-8 overflow-hidden">
+                    <DiagonalHatching
+                        patternId="pathogen-cta-hatching"
+                        strokeClass="stroke-lime-100"
+                        maskDirection="top"
+                    />
+                    <div className="relative z-10">
+                        <h2 className="text-2xl font-semibold text-sage-900 mb-4">
+                            Ready to Get Started?
+                        </h2>
+                        <p className="text-sage-700 mb-6">
+                            Contact us to discuss your testing needs or request a quote.
+                        </p>
+                        <div className="flex flex-col gap-4 sm:flex-row">
+                            <Link
+                                href="/contact"
+                                className="inline-flex items-center justify-center rounded-md bg-lime-600 px-6 py-3 font-medium text-white shadow-sm transition-colors hover:bg-lime-700"
+                            >
+                                Contact Us
+                            </Link>
+                            <Link
+                                href="/pricing"
+                                className="inline-flex items-center justify-center rounded-md border border-sage-300 bg-white px-6 py-3 font-medium text-sage-900 shadow-sm transition-colors hover:bg-sage-50"
+                            >
+                                View Pricing
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

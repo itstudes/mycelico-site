@@ -1,4 +1,6 @@
 import { PageWrapper } from "@/components/PageWrapper"
+import { DiagonalHatching } from "@/components/ui/DiagonalHatching"
+import { VerticalDottedLines } from "@/components/ui/VerticalDottedLines"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -10,8 +12,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <PageWrapper>
-            <div className="space-y-8 max-w-4xl mx-auto">
-                <div className="space-y-4 text-center">
+            <div className="relative space-y-8 max-w-4xl mx-auto overflow-hidden">
+                <VerticalDottedLines variant="minimal" />
+
+                <div className="relative z-10 space-y-4 text-center">
                     <h1 className="text-4xl font-bold text-sage-900 md:text-5xl">
                         Get in Touch
                     </h1>
@@ -20,7 +24,7 @@ export default function ContactPage() {
                     </p>
                 </div>
 
-                <div className="grid gap-8 md:grid-cols-2 mt-12">
+                <div className="relative z-10 grid gap-8 md:grid-cols-2 mt-12">
                     <div className="space-y-6">
                         <div className="rounded-lg border border-sage-200 bg-white p-6 shadow-sm">
                             <h2 className="text-xl font-semibold text-sage-900 mb-4">
@@ -33,7 +37,7 @@ export default function ContactPage() {
                                     </h3>
                                     <a
                                         href="mailto:info@mycelico.co.za"
-                                        className="text-sage-900 hover:text-sage-700 transition-colors"
+                                        className="text-lime-700 hover:text-lime-800 transition-colors"
                                     >
                                         info@mycelico.co.za
                                     </a>
@@ -79,82 +83,89 @@ export default function ContactPage() {
                         </div>
                     </div>
 
-                    <div className="rounded-lg border border-sage-200 bg-white p-6 shadow-sm">
-                        <h2 className="text-xl font-semibold text-sage-900 mb-4">
-                            Send Us a Message
-                        </h2>
-                        <form className="space-y-4">
-                            <div>
-                                <label
-                                    htmlFor="name"
-                                    className="block text-sm font-medium text-sage-900 mb-1"
+                    <div className="relative rounded-lg border border-sage-200 bg-white p-6 shadow-sm overflow-hidden">
+                        <DiagonalHatching
+                            patternId="contact-hatching"
+                            strokeClass="stroke-sage-100/50"
+                            maskDirection="bottom"
+                        />
+                        <div className="relative z-10">
+                            <h2 className="text-xl font-semibold text-sage-900 mb-4">
+                                Send Us a Message
+                            </h2>
+                            <form className="space-y-4">
+                                <div>
+                                    <label
+                                        htmlFor="name"
+                                        className="block text-sm font-medium text-sage-900 mb-1"
+                                    >
+                                        Name
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        className="w-full rounded-md border border-sage-300 bg-white px-4 py-2 text-sage-900 placeholder-sage-400 focus:border-lime-500 focus:outline-none focus:ring-1 focus:ring-lime-500"
+                                        placeholder="Your name"
+                                    />
+                                </div>
+                                <div>
+                                    <label
+                                        htmlFor="email"
+                                        className="block text-sm font-medium text-sage-900 mb-1"
+                                    >
+                                        Email
+                                    </label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        className="w-full rounded-md border border-sage-300 bg-white px-4 py-2 text-sage-900 placeholder-sage-400 focus:border-lime-500 focus:outline-none focus:ring-1 focus:ring-lime-500"
+                                        placeholder="your.email@example.com"
+                                    />
+                                </div>
+                                <div>
+                                    <label
+                                        htmlFor="phone"
+                                        className="block text-sm font-medium text-sage-900 mb-1"
+                                    >
+                                        Phone (optional)
+                                    </label>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        className="w-full rounded-md border border-sage-300 bg-white px-4 py-2 text-sage-900 placeholder-sage-400 focus:border-lime-500 focus:outline-none focus:ring-1 focus:ring-lime-500"
+                                        placeholder="+27 12 345 6789"
+                                    />
+                                </div>
+                                <div>
+                                    <label
+                                        htmlFor="message"
+                                        className="block text-sm font-medium text-sage-900 mb-1"
+                                    >
+                                        Message
+                                    </label>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        rows={5}
+                                        className="w-full rounded-md border border-sage-300 bg-white px-4 py-2 text-sage-900 placeholder-sage-400 focus:border-lime-500 focus:outline-none focus:ring-1 focus:ring-lime-500"
+                                        placeholder="Tell us about your testing needs..."
+                                    />
+                                </div>
+                                <button
+                                    type="submit"
+                                    className="w-full rounded-md bg-lime-600 px-6 py-3 font-medium text-white shadow-sm transition-colors hover:bg-lime-700 focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2"
                                 >
-                                    Name
-                                </label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    className="w-full rounded-md border border-sage-300 bg-white px-4 py-2 text-sage-900 placeholder-sage-400 focus:border-sage-500 focus:outline-none focus:ring-1 focus:ring-sage-500"
-                                    placeholder="Your name"
-                                />
-                            </div>
-                            <div>
-                                <label
-                                    htmlFor="email"
-                                    className="block text-sm font-medium text-sage-900 mb-1"
-                                >
-                                    Email
-                                </label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    className="w-full rounded-md border border-sage-300 bg-white px-4 py-2 text-sage-900 placeholder-sage-400 focus:border-sage-500 focus:outline-none focus:ring-1 focus:ring-sage-500"
-                                    placeholder="your.email@example.com"
-                                />
-                            </div>
-                            <div>
-                                <label
-                                    htmlFor="phone"
-                                    className="block text-sm font-medium text-sage-900 mb-1"
-                                >
-                                    Phone (optional)
-                                </label>
-                                <input
-                                    type="tel"
-                                    id="phone"
-                                    name="phone"
-                                    className="w-full rounded-md border border-sage-300 bg-white px-4 py-2 text-sage-900 placeholder-sage-400 focus:border-sage-500 focus:outline-none focus:ring-1 focus:ring-sage-500"
-                                    placeholder="+27 12 345 6789"
-                                />
-                            </div>
-                            <div>
-                                <label
-                                    htmlFor="message"
-                                    className="block text-sm font-medium text-sage-900 mb-1"
-                                >
-                                    Message
-                                </label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    rows={5}
-                                    className="w-full rounded-md border border-sage-300 bg-white px-4 py-2 text-sage-900 placeholder-sage-400 focus:border-sage-500 focus:outline-none focus:ring-1 focus:ring-sage-500"
-                                    placeholder="Tell us about your testing needs..."
-                                />
-                            </div>
-                            <button
-                                type="submit"
-                                className="w-full rounded-md bg-sage-600 px-6 py-3 font-medium text-white transition-colors hover:bg-sage-700 focus:outline-none focus:ring-2 focus:ring-sage-500 focus:ring-offset-2"
-                            >
-                                Send Message
-                            </button>
-                        </form>
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
 
-                <div className="mt-12 rounded-lg bg-cream-100 border border-cream-300 p-6 text-center">
+                <div className="relative z-10 mt-12 rounded-lg bg-cream-100 border border-cream-300 p-6 text-center">
                     <p className="text-sage-700">
                         Sample submission guidelines and courier information available upon
                         request.

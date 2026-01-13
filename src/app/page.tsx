@@ -1,3 +1,6 @@
+import { DiagonalHatching } from "@/components/ui/DiagonalHatching"
+import { PathogenOrbit } from "@/components/ui/PathogenOrbit"
+import { VerticalDottedLines } from "@/components/ui/VerticalDottedLines"
 import Link from "next/link"
 import { MycelicoMark } from "../../public/MycelicoMark"
 
@@ -5,38 +8,50 @@ export default function Home() {
   return (
     <main className="relative mx-auto flex flex-col">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 xl:px-0">
+      <section className="relative pt-32 pb-20 px-4 xl:px-0 overflow-hidden">
+        <VerticalDottedLines variant="minimal" />
         <div className="max-w-6xl mx-auto">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h1 className="text-5xl font-bold text-sage-900 md:text-6xl lg:text-7xl">
-              Professional Plant Pathogen Testing
-            </h1>
-            <p className="text-xl text-sage-700 leading-relaxed">
-              Accurate, timely diagnostic services for South African
-              agriculture. Protect your crops with expert pathogen detection and
-              analysis.
-            </p>
-            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center pt-4">
-              <Link
-                href="/pathogen-testing"
-                className="inline-flex items-center justify-center rounded-md bg-lime-600 px-8 py-4 font-semibold text-white transition-colors hover:bg-lime-700 shadow-sm"
-              >
-                Our Services
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-md border border-sage-300 bg-white px-8 py-4 font-semibold text-sage-900 transition-colors hover:bg-sage-50 shadow-sm"
-              >
-                Get in Touch
-              </Link>
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
+            <div className="space-y-6 text-center lg:text-left">
+              <h1 className="text-5xl font-bold text-sage-900 md:text-6xl lg:text-7xl">
+                Professional Plant Pathogen Testing
+              </h1>
+              <p className="text-xl text-sage-700 leading-relaxed">
+                Accurate, timely diagnostic services for South African
+                agriculture. Protect your crops with expert pathogen detection
+                and analysis.
+              </p>
+              <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start pt-4">
+                <Link
+                  href="/pathogen-testing"
+                  className="inline-flex items-center justify-center rounded-md bg-lime-600 px-8 py-4 font-semibold text-white transition-colors hover:bg-lime-700 shadow-sm"
+                >
+                  Our Services
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-md border border-sage-300 bg-white px-8 py-4 font-semibold text-sage-900 transition-colors hover:bg-sage-50 shadow-sm"
+                >
+                  Get in Touch
+                </Link>
+              </div>
+            </div>
+            {/* Pathogen Orbit Visualization */}
+            <div className="relative hidden lg:flex items-center justify-center">
+              <DiagonalHatching
+                patternId="hero-hatching"
+                maskDirection="both"
+              />
+              <PathogenOrbit />
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 xl:px-0 bg-white">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative py-20 px-4 xl:px-0 bg-white overflow-hidden">
+        <VerticalDottedLines variant="full" />
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-sage-900 md:text-4xl">
               Comprehensive Testing Services

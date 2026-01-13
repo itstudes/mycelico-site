@@ -1,4 +1,6 @@
 import { PageWrapper } from "@/components/PageWrapper"
+import { DiagonalHatching } from "@/components/ui/DiagonalHatching"
+import { VerticalDottedLines } from "@/components/ui/VerticalDottedLines"
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
@@ -6,15 +8,35 @@ import Link from "next/link"
 export const metadata: Metadata = {
     title: "Pricing | Mycelico",
     description:
-        "Transparent pricing for plant pathogen testing services. Competitive rates for South African agricultural producers.",
+        "Transparent pricing for plant pathogen testing services. Starting from R450 per sample with 5-10 day turnaround. Enterprise solutions available for commercial operations.",
+}
+
+function CheckIcon() {
+    return (
+        <svg
+            className="h-6 w-6 shrink-0 text-lime-600"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+        >
+            <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+            />
+        </svg>
+    )
 }
 
 export default function PricingPage() {
     return (
         <PageWrapper>
-            <div className="space-y-8">
-                <div className="space-y-4 text-center">
-                    <div className="flex justify-center mb-6">
+            <div className="relative space-y-8 overflow-hidden">
+                <VerticalDottedLines variant="minimal" />
+
+                <div className="space-y-4 text-center relative z-10">
+                    <div className="mb-6 flex justify-center">
                         <Image
                             src="/logo.png"
                             alt="Mycelico"
@@ -24,319 +46,134 @@ export default function PricingPage() {
                         />
                     </div>
                     <h1 className="text-4xl font-bold text-sage-900 md:text-5xl">
-                        Pricing
+                        Simple, Transparent Pricing
                     </h1>
-                    <p className="text-lg text-sage-700 max-w-2xl mx-auto">
-                        Clear, competitive pricing for professional pathogen testing
-                        services. Choose the package that fits your needs.
+                    <p className="mx-auto max-w-2xl text-lg text-sage-700">
+                        Professional pathogen testing services at competitive rates. Choose
+                        the option that best fits your needs.
                     </p>
                 </div>
 
-                <div className="grid gap-8 md:grid-cols-3 mt-12 max-w-5xl mx-auto">
-                    <div className="rounded-lg border border-sage-200 bg-white p-8 shadow-sm flex flex-col">
+                <div className="relative mt-12 grid max-w-4xl mx-auto gap-8 md:grid-cols-2">
+                    {/* Starter Tier */}
+                    <div className="relative flex flex-col rounded-lg border-2 border-lime-500 bg-white p-8 shadow-lg">
+                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-lime-600 px-4 py-1 text-sm font-medium text-white">
+                            Most Popular
+                        </div>
                         <div className="mb-6">
-                            <h2 className="text-2xl font-semibold text-sage-900 mb-2">
-                                Basic Testing
+                            <h2 className="mb-2 text-2xl font-semibold text-sage-900">
+                                Starter
                             </h2>
-                            <p className="text-sage-600 text-sm mb-4">
-                                Essential pathogen screening
+                            <p className="mb-4 text-sm text-sage-600">
+                                Perfect for home growers and small test batches
                             </p>
                             <div className="flex items-baseline gap-1">
-                                <span className="text-4xl font-bold text-sage-900">R850</span>
+                                <span className="text-sm text-sage-600">From</span>
+                                <span className="text-4xl font-bold text-sage-900">R450</span>
                                 <span className="text-sage-600">/sample</span>
                             </div>
                         </div>
-                        <ul className="space-y-3 mb-8 flex-1">
+                        <ul className="mb-8 flex-1 space-y-3">
                             <li className="flex gap-2 text-sage-700">
-                                <svg
-                                    className="h-6 w-6 shrink-0 text-sage-500"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M5 13l4 4L19 7"
-                                    />
-                                </svg>
-                                Visual inspection
+                                <CheckIcon />
+                                Standard pathogen screening
                             </li>
                             <li className="flex gap-2 text-sage-700">
-                                <svg
-                                    className="h-6 w-6 shrink-0 text-sage-500"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M5 13l4 4L19 7"
-                                    />
-                                </svg>
-                                Single pathogen test
+                                <CheckIcon />
+                                5-10 business day turnaround
                             </li>
                             <li className="flex gap-2 text-sage-700">
-                                <svg
-                                    className="h-6 w-6 shrink-0 text-sage-500"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M5 13l4 4L19 7"
-                                    />
-                                </svg>
-                                5-7 business day turnaround
+                                <CheckIcon />
+                                Digital results report
                             </li>
                             <li className="flex gap-2 text-sage-700">
-                                <svg
-                                    className="h-6 w-6 shrink-0 text-sage-500"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M5 13l4 4L19 7"
-                                    />
-                                </svg>
-                                Basic report
+                                <CheckIcon />
+                                Email support
+                            </li>
+                            <li className="flex gap-2 text-sage-700">
+                                <CheckIcon />
+                                Sample collection guidance
                             </li>
                         </ul>
                         <Link
                             href="/contact"
-                            className="inline-flex items-center justify-center rounded-md border border-sage-300 bg-white px-6 py-3 font-medium text-sage-900 transition-colors hover:bg-sage-50"
+                            className="inline-flex items-center justify-center rounded-md bg-lime-600 px-6 py-3 font-medium text-white shadow-sm transition-colors hover:bg-lime-700"
                         >
                             Get Started
                         </Link>
                     </div>
 
-                    <div className="rounded-lg border-2 border-sage-500 bg-white p-8 shadow-lg flex flex-col relative">
-                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-sage-600 text-white text-sm font-medium px-4 py-1 rounded-full">
-                            Popular
-                        </div>
-                        <div className="mb-6">
-                            <h2 className="text-2xl font-semibold text-sage-900 mb-2">
-                                Comprehensive
-                            </h2>
-                            <p className="text-sage-600 text-sm mb-4">
-                                Full diagnostic panel
-                            </p>
-                            <div className="flex items-baseline gap-1">
-                                <span className="text-4xl font-bold text-sage-900">R1,850</span>
-                                <span className="text-sage-600">/sample</span>
-                            </div>
-                        </div>
-                        <ul className="space-y-3 mb-8 flex-1">
-                            <li className="flex gap-2 text-sage-700">
-                                <svg
-                                    className="h-6 w-6 shrink-0 text-sage-500"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M5 13l4 4L19 7"
-                                    />
-                                </svg>
-                                Multi-pathogen screening
-                            </li>
-                            <li className="flex gap-2 text-sage-700">
-                                <svg
-                                    className="h-6 w-6 shrink-0 text-sage-500"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M5 13l4 4L19 7"
-                                    />
-                                </svg>
-                                Molecular diagnostics
-                            </li>
-                            <li className="flex gap-2 text-sage-700">
-                                <svg
-                                    className="h-6 w-6 shrink-0 text-sage-500"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M5 13l4 4L19 7"
-                                    />
-                                </svg>
-                                3-5 business day turnaround
-                            </li>
-                            <li className="flex gap-2 text-sage-700">
-                                <svg
-                                    className="h-6 w-6 shrink-0 text-sage-500"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M5 13l4 4L19 7"
-                                    />
-                                </svg>
-                                Detailed report with recommendations
-                            </li>
-                            <li className="flex gap-2 text-sage-700">
-                                <svg
-                                    className="h-6 w-6 shrink-0 text-sage-500"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M5 13l4 4L19 7"
-                                    />
-                                </svg>
-                                Phone consultation
-                            </li>
-                        </ul>
-                        <Link
-                            href="/contact"
-                            className="inline-flex items-center justify-center rounded-md bg-sage-600 px-6 py-3 font-medium text-white transition-colors hover:bg-sage-700"
-                        >
-                            Get Started
-                        </Link>
-                    </div>
-
-                    <div className="rounded-lg border border-sage-200 bg-white p-8 shadow-sm flex flex-col">
-                        <div className="mb-6">
-                            <h2 className="text-2xl font-semibold text-sage-900 mb-2">
+                    {/* Enterprise Tier */}
+                    <div className="relative flex flex-col overflow-hidden rounded-lg border border-sage-200 bg-white p-8 shadow-sm">
+                        <DiagonalHatching
+                            patternId="enterprise-hatching"
+                            strokeClass="stroke-sage-100"
+                            maskDirection="top"
+                        />
+                        <div className="relative z-10 mb-6">
+                            <h2 className="mb-2 text-2xl font-semibold text-sage-900">
                                 Enterprise
                             </h2>
-                            <p className="text-sage-600 text-sm mb-4">
-                                For large operations
+                            <p className="mb-4 text-sm text-sage-600">
+                                For commercial operations and large-scale testing
                             </p>
                             <div className="flex items-baseline gap-1">
                                 <span className="text-4xl font-bold text-sage-900">Custom</span>
                             </div>
                         </div>
-                        <ul className="space-y-3 mb-8 flex-1">
+                        <ul className="relative z-10 mb-8 flex-1 space-y-3">
                             <li className="flex gap-2 text-sage-700">
-                                <svg
-                                    className="h-6 w-6 shrink-0 text-sage-500"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M5 13l4 4L19 7"
-                                    />
-                                </svg>
-                                Bulk pricing
+                                <CheckIcon />
+                                Large batch processing
                             </li>
                             <li className="flex gap-2 text-sage-700">
-                                <svg
-                                    className="h-6 w-6 shrink-0 text-sage-500"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M5 13l4 4L19 7"
-                                    />
-                                </svg>
-                                Priority processing
+                                <CheckIcon />
+                                Expedited results available
                             </li>
                             <li className="flex gap-2 text-sage-700">
-                                <svg
-                                    className="h-6 w-6 shrink-0 text-sage-500"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M5 13l4 4L19 7"
-                                    />
-                                </svg>
+                                <CheckIcon />
+                                Volume-based pricing
+                            </li>
+                            <li className="flex gap-2 text-sage-700">
+                                <CheckIcon />
                                 Dedicated account manager
                             </li>
                             <li className="flex gap-2 text-sage-700">
-                                <svg
-                                    className="h-6 w-6 shrink-0 text-sage-500"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M5 13l4 4L19 7"
-                                    />
-                                </svg>
+                                <CheckIcon />
+                                Priority phone support
+                            </li>
+                            <li className="flex gap-2 text-sage-700">
+                                <CheckIcon />
                                 Custom reporting formats
                             </li>
                             <li className="flex gap-2 text-sage-700">
-                                <svg
-                                    className="h-6 w-6 shrink-0 text-sage-500"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M5 13l4 4L19 7"
-                                    />
-                                </svg>
-                                On-site visits available
+                                <CheckIcon />
+                                On-site consultation available
                             </li>
                         </ul>
                         <Link
                             href="/contact"
-                            className="inline-flex items-center justify-center rounded-md border border-sage-300 bg-white px-6 py-3 font-medium text-sage-900 transition-colors hover:bg-sage-50"
+                            className="relative z-10 inline-flex items-center justify-center rounded-md border border-sage-300 bg-white px-6 py-3 font-medium text-sage-900 shadow-sm transition-colors hover:bg-sage-50"
                         >
-                            Contact Sales
+                            Contact Us
                         </Link>
                     </div>
                 </div>
 
-                <div className="mt-16 rounded-lg bg-cream-100 border border-cream-300 p-8 max-w-3xl mx-auto">
-                    <h2 className="text-xl font-semibold text-sage-900 mb-4">
-                        Volume Discounts Available
+                {/* Additional Info */}
+                <div className="relative z-10 mx-auto mt-16 max-w-3xl rounded-lg border border-cream-300 bg-cream-100 p-8">
+                    <h2 className="mb-4 text-xl font-semibold text-sage-900">
+                        Not sure which option is right for you?
                     </h2>
-                    <p className="text-sage-700">
-                        We offer competitive pricing for producers submitting multiple
-                        samples regularly. Contact us to discuss a custom package tailored
-                        to your operation&apos;s needs.
+                    <p className="mb-4 text-sage-700">
+                        We&apos;re happy to discuss your specific testing requirements and
+                        recommend the best approach for your operation. Whether you&apos;re
+                        a home grower checking a few plants or a commercial farm needing
+                        regular screening, we can tailor our services to your needs.
+                    </p>
+                    <p className="text-sage-600 text-sm">
+                        All prices exclude VAT. Turnaround times calculated from receipt of
+                        samples at our laboratory.
                     </p>
                 </div>
             </div>
