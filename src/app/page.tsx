@@ -1,48 +1,54 @@
-import { DiagonalHatching } from "@/components/ui/DiagonalHatching"
-import { PathogenOrbit } from "@/components/ui/PathogenOrbit"
+import { ReadyToGetStarted } from "@/components/ui/ReadyToGetStarted"
 import { VerticalDottedLines } from "@/components/ui/VerticalDottedLines"
+import Image from "next/image"
 import Link from "next/link"
 import { MycelicoMark } from "../../public/MycelicoMark"
 
 export default function Home() {
   return (
     <main className="relative mx-auto flex flex-col">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 xl:px-0 overflow-hidden">
-        <VerticalDottedLines />
-        <div className="max-w-6xl mx-auto">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
-            <div className="space-y-6 text-center lg:text-left">
-              <h1 className="text-5xl font-bold text-sage-900 md:text-6xl lg:text-7xl">
+      {/* Hero Section with Background Image */}
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/farming-aerial-4.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+            aria-hidden="true"
+          />
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-sage-900/90 via-sage-900/80 to-sage-900/60" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 w-full px-4 xl:px-0 py-32">
+          <div className="max-w-6xl mx-auto">
+            <div className="max-w-2xl space-y-6">
+              <h1 className="text-5xl font-bold text-white md:text-6xl lg:text-7xl">
                 Professional Plant Pathogen Testing
               </h1>
-              <p className="text-xl text-sage-700 leading-relaxed">
+              <p className="text-xl text-cream-100 leading-relaxed">
                 Accurate, timely diagnostic services for South African
                 agriculture. Protect your crops with expert pathogen detection
                 and analysis.
               </p>
-              <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start pt-4">
+              <div className="flex flex-col gap-4 sm:flex-row pt-4">
                 <Link
                   href="/pathogen-testing"
-                  className="inline-flex items-center justify-center rounded-md bg-lime-600 px-8 py-4 font-semibold text-white transition-colors hover:bg-lime-700 shadow-sm"
+                  className="inline-flex items-center justify-center rounded-md bg-lime-600 px-8 py-4 font-semibold text-white transition-colors hover:bg-lime-700 shadow-lg"
                 >
                   Our Services
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-md border border-sage-300 bg-white px-8 py-4 font-semibold text-sage-900 transition-colors hover:bg-sage-50 shadow-sm"
+                  className="inline-flex items-center justify-center rounded-md border border-white/30 bg-white/10 backdrop-blur-sm px-8 py-4 font-semibold text-white transition-colors hover:bg-white/20 shadow-lg"
                 >
                   Get in Touch
                 </Link>
               </div>
-            </div>
-            {/* Pathogen Orbit Visualization */}
-            <div className="relative hidden lg:flex items-center justify-center">
-              <DiagonalHatching
-                patternId="hero-hatching"
-                maskDirection="both"
-              />
-              <PathogenOrbit />
             </div>
           </div>
         </div>
@@ -133,9 +139,67 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Section */}
-      <section className="py-20 px-4 xl:px-0">
+      {/* Cellular/Lab Image Section */}
+      <section className="relative py-20 px-4 xl:px-0 overflow-hidden">
         <div className="max-w-6xl mx-auto">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+            <div className="relative rounded-xl overflow-hidden shadow-2xl order-2 lg:order-1">
+              <Image
+                src="/images/cellular-1.jpg"
+                alt="Microscopic view of plant cellular structure"
+                width={600}
+                height={400}
+                className="w-full object-cover aspect-[4/3]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-sage-900/40 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="text-white text-sm font-medium">
+                  Advanced molecular analysis at the cellular level
+                </p>
+              </div>
+            </div>
+            <div className="space-y-6 order-1 lg:order-2">
+              <h2 className="text-3xl font-bold text-sage-900 md:text-4xl">
+                Precision Diagnostics at the Molecular Level
+              </h2>
+              <p className="text-sage-700 leading-relaxed">
+                Our laboratory uses advanced molecular techniques to detect
+                pathogens with exceptional accuracy. By analysing at the
+                cellular level, we can identify infections before visible
+                symptoms appear—giving you the early warning you need to protect
+                your crops.
+              </p>
+              <p className="text-sage-700 leading-relaxed">
+                From viroids like HLVd to fungal and bacterial pathogens, our
+                testing services provide the clarity you need for informed
+                decision-making.
+              </p>
+              <Link
+                href="/pathogen-testing"
+                className="inline-flex items-center justify-center rounded-md bg-lime-600 px-6 py-3 font-medium text-white transition-colors hover:bg-lime-700 shadow-sm"
+              >
+                Explore Our Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Section with Farm Image */}
+      <section className="relative py-20 px-4 xl:px-0 overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/farming-side-view-1.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            aria-hidden="true"
+          />
+          <div className="absolute inset-0 bg-cream-50/95" />
+        </div>
+
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-sage-900 md:text-4xl">
@@ -143,7 +207,7 @@ export default function Home() {
               </h2>
               <div className="space-y-4">
                 <div className="flex gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sage-100 text-sage-800">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-lime-100 text-lime-800">
                     <svg
                       className="h-6 w-6"
                       fill="none"
@@ -169,7 +233,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sage-100 text-sage-800">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-lime-100 text-lime-800">
                     <svg
                       className="h-6 w-6"
                       fill="none"
@@ -195,7 +259,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sage-100 text-sage-800">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-lime-100 text-lime-800">
                     <svg
                       className="h-6 w-6"
                       fill="none"
@@ -222,30 +286,33 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="rounded-lg border border-sage-200 bg-sage-50 p-8 shadow-sm">
-              <h3 className="text-2xl font-semibold text-sage-900 mb-4">
-                Ready to protect your crops?
-              </h3>
-              <p className="text-sage-700 mb-6">
-                Contact us today to discuss your pathogen testing needs or
-                request a quote for your operation.
-              </p>
-              <div className="flex flex-col gap-3">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-md bg-lime-600 px-6 py-3 font-medium text-white transition-colors hover:bg-lime-700 shadow-sm"
-                >
-                  Contact Us
-                </Link>
-                <Link
-                  href="/pricing"
-                  className="inline-flex items-center justify-center rounded-md border border-sage-300 bg-white px-6 py-3 font-medium text-sage-900 transition-colors hover:bg-sage-50"
-                >
-                  View Pricing
-                </Link>
-              </div>
+            <div className="relative rounded-xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/farming-side-view-1.jpg"
+                alt="Agricultural field in South Africa"
+                width={600}
+                height={400}
+                className="w-full object-cover aspect-[4/3]"
+              />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="py-20 px-4 xl:px-0">
+        <div className="max-w-6xl mx-auto">
+          <ReadyToGetStarted
+            patternId="home-cta"
+            title="Ready to protect your crops?"
+            description="Contact us today to discuss your pathogen testing needs or request a quote for your operation."
+            primaryLabel="Contact Us"
+            primaryHref="/contact"
+            secondaryLabel="View Pricing"
+            secondaryHref="/pricing"
+            imageSrc="/images/apples-rot-4.jpg"
+            imageAlt="Apple disease requiring pathogen testing"
+          />
         </div>
       </section>
     </main>

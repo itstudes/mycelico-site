@@ -1,8 +1,8 @@
 import { PageWrapper } from "@/components/PageWrapper"
 import { DiagonalHatching } from "@/components/ui/DiagonalHatching"
+import { ReadyToGetStarted } from "@/components/ui/ReadyToGetStarted"
 import { VerticalDottedLines } from "@/components/ui/VerticalDottedLines"
 import type { Metadata } from "next"
-import Image from "next/image"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -36,15 +36,6 @@ export default function PricingPage() {
                 <VerticalDottedLines />
 
                 <div className="space-y-4 text-center relative z-10">
-                    <div className="mb-6 flex justify-center">
-                        <Image
-                            src="/logo.png"
-                            alt="Mycelico"
-                            width={80}
-                            height={80}
-                            className="h-20 w-auto"
-                        />
-                    </div>
                     <h1 className="text-4xl font-bold text-sage-900 md:text-5xl">
                         Simple, Transparent Pricing
                     </h1>
@@ -175,6 +166,21 @@ export default function PricingPage() {
                         All prices exclude VAT. Turnaround times calculated from receipt of
                         samples at our laboratory.
                     </p>
+                </div>
+
+                {/* CTA Section */}
+                <div className="relative z-10 mt-16">
+                    <ReadyToGetStarted
+                        patternId="pricing-cta"
+                        title="Ready to Get Started?"
+                        description="Contact us to discuss your testing needs or submit samples for analysis."
+                        primaryLabel="Contact Us"
+                        primaryHref="/contact"
+                        secondaryLabel="View Services"
+                        secondaryHref="/pathogen-testing"
+                        imageSrc="/images/farming-aerial-2.jpg"
+                        imageAlt="Aerial view of South African farmland"
+                    />
                 </div>
             </div>
         </PageWrapper>
