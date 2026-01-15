@@ -1,5 +1,5 @@
 import { PageWrapper } from "@/components/PageWrapper"
-import { DiagonalHatching } from "@/components/ui/DiagonalHatching"
+import { ReadyToGetStarted } from "@/components/ui/ReadyToGetStarted"
 import { TestTypeCard } from "@/components/ui/TestTypeCard"
 import { VerticalDottedLines } from "@/components/ui/VerticalDottedLines"
 import {
@@ -117,34 +117,24 @@ export default function PathogenTestingPage() {
                     </div>
                 </div>
 
-                <div className="relative z-10 mt-12 rounded-lg bg-lime-50 border border-lime-200 p-8 overflow-hidden">
-                    <DiagonalHatching
-                        patternId="pathogen-cta-hatching"
-                        strokeClass="stroke-lime-100"
-                        maskDirection="top"
-                    />
-                    <div className="relative z-10">
-                        <h2 className="text-2xl font-semibold text-sage-900 mb-4">
-                            Ready to Get Started?
-                        </h2>
-                        <p className="text-sage-700 mb-6">
-                            Contact us to discuss your testing needs or request a quote.
-                        </p>
-                        <div className="flex flex-col gap-4 sm:flex-row">
-                            <Link
-                                href="/contact"
-                                className="inline-flex items-center justify-center rounded-md bg-lime-600 px-6 py-3 font-medium text-white shadow-sm transition-colors hover:bg-lime-700"
-                            >
-                                Contact Us
-                            </Link>
-                            <Link
-                                href="/pricing"
-                                className="inline-flex items-center justify-center rounded-md border border-sage-300 bg-white px-6 py-3 font-medium text-sage-900 shadow-sm transition-colors hover:bg-sage-50"
-                            >
-                                View Pricing
-                            </Link>
-                        </div>
-                    </div>
+                <div className="relative z-10 mt-12 rounded-lg border border-sage-200 bg-white p-6">
+                    <h2 className="text-xl font-semibold text-sage-900 mb-3">
+                        Need Help with Sample Collection?
+                    </h2>
+                    <p className="text-sage-700 mb-4">
+                        Proper sample collection is critical for accurate results. View our
+                        detailed guidelines for collecting leaf, soil, and water samples.
+                    </p>
+                    <Link
+                        href="/pathogen-testing/sample-collection-guidelines"
+                        className="inline-flex items-center justify-center rounded-md border border-sage-300 bg-white px-6 py-3 font-medium text-sage-900 shadow-sm transition-colors hover:bg-sage-50"
+                    >
+                        Sample Collection Guidelines
+                    </Link>
+                </div>
+
+                <div className="relative z-10 mt-12">
+                    <ReadyToGetStarted patternId="pathogen-cta-hatching" />
                 </div>
             </div>
         </PageWrapper>
