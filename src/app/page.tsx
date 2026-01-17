@@ -1,10 +1,16 @@
 import { HeroBanner } from "@/components/ui/HeroBanner"
 import { ReadyToGetStarted } from "@/components/ui/ReadyToGetStarted"
+import { StickerCard } from "@/components/ui/StickerCard"
 import { VerticalDottedLines } from "@/components/ui/VerticalDottedLines"
 import { ZoneGrid } from "@/components/ui/ZoneGrid"
+import {
+  RiLightbulbFlashFill,
+  RiMicroscopeFill,
+  RiMoneyDollarCircleFill,
+  RiShieldCheckFill,
+} from "@remixicon/react"
 import Image from "next/image"
 import Link from "next/link"
-import { MycelicoMark } from "../../public/MycelicoMark"
 
 export default function Home() {
   return (
@@ -28,87 +34,31 @@ export default function Home() {
         minHeight="80vh"
       />
 
-      {/* Features Section */}
-      <section className="relative py-20 px-4 xl:px-0 bg-white overflow-hidden">
+      {/* Sticker Card Transition Section */}
+      <section className="relative py-16 px-4 xl:px-0 bg-white overflow-hidden">
         <VerticalDottedLines />
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-sage-900 md:text-4xl">
-              Comprehensive Testing Services
-            </h2>
-            <p className="mt-4 text-lg text-sage-700">
-              Detect and identify the pathogens affecting your crops
-            </p>
-          </div>
-          <div className="grid gap-8 md:grid-cols-3">
-            <div className="rounded-lg border border-sage-200 p-8 bg-cream-50 hover:shadow-md transition-shadow">
-              <div className="mb-4 flex justify-center">
-                <div className="rounded-full bg-sage-100 p-4">
-                  <MycelicoMark className="h-12 w-12" />
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold text-sage-900 mb-3 text-center">
-                Fungal Pathogens
-              </h3>
-              <p className="text-sage-700 text-center">
-                Accurate detection of fungal diseases including blights, mildew,
-                and rust affecting your crops.
-              </p>
-            </div>
-
-            <div className="rounded-lg border border-sage-200 p-8 bg-cream-50 hover:shadow-md transition-shadow">
-              <div className="mb-4 flex justify-center">
-                <div className="rounded-full bg-lavender-100 p-4">
-                  <svg
-                    className="h-12 w-12 text-lavender-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold text-sage-900 mb-3 text-center">
-                Bacterial Diseases
-              </h3>
-              <p className="text-sage-700 text-center">
-                Screening for bacterial pathogens that can devastate crops if
-                left undetected.
-              </p>
-            </div>
-
-            <div className="rounded-lg border border-sage-200 p-8 bg-cream-50 hover:shadow-md transition-shadow">
-              <div className="mb-4 flex justify-center">
-                <div className="rounded-full bg-sky-100 p-4">
-                  <svg
-                    className="h-12 w-12 text-sky-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold text-sage-900 mb-3 text-center">
-                Viral Infections
-              </h3>
-              <p className="text-sage-700 text-center">
-                Molecular testing for viral diseases to help you identify and
-                manage infections early.
-              </p>
-            </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <StickerCard
+              Icon={RiMicroscopeFill}
+              title="Microbiology Testing Services"
+              description="Accurate molecular diagnostics for fungi, bacteria, and viroids."
+            />
+            <StickerCard
+              Icon={RiLightbulbFlashFill}
+              title="Actionable Insights"
+              description="Clear, decision‑ready reports that guide crop management."
+            />
+            <StickerCard
+              Icon={RiMoneyDollarCircleFill}
+              title="High ROI"
+              description="Prevent losses and optimise inputs with targeted testing."
+            />
+            <StickerCard
+              Icon={RiShieldCheckFill}
+              title="Proactive Detection"
+              description="Detect problems early to protect yield and quality."
+            />
           </div>
         </div>
       </section>
