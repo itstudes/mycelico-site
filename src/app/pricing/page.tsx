@@ -171,16 +171,14 @@ export default function PricingPage() {
                 {/* CTA Section */}
                 <div className="relative z-10 mt-16">
                     <ReadyToGetStarted
-                        patternId="pricing-cta"
+                        patternId="about-cta"
                         variant="light"
-                        title="Ready to Get Started?"
-                        description="Contact us to discuss your testing needs or submit samples for analysis."
-                        primaryLabel="Contact Us"
+                        title="Ready to Work Together?"
+                        description="Contact us to learn more about how our molecular testing services can benefit your operation."
+                        primaryLabel="Get in Touch"
                         primaryHref="/contact"
                         secondaryLabel="View Services"
                         secondaryHref="/pathogen-testing"
-                        imageSrc="/images/farming-aerial-2.jpg"
-                        imageAlt="Aerial view of South African farmland"
                     />
                 </div>
             </div>
