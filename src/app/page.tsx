@@ -1,3 +1,4 @@
+import { HeroBanner } from "@/components/ui/HeroBanner"
 import { ReadyToGetStarted } from "@/components/ui/ReadyToGetStarted"
 import { VerticalDottedLines } from "@/components/ui/VerticalDottedLines"
 import Image from "next/image"
@@ -8,51 +9,23 @@ export default function Home() {
   return (
     <main className="relative mx-auto flex flex-col">
       {/* Hero Section with Background Image */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <Image
-            src="/images/farming-aerial-4.jpg"
-            alt=""
-            fill
-            className="object-cover"
-            priority
-            aria-hidden="true"
-          />
-          {/* Dark overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-sage-900/90 via-sage-900/80 to-sage-900/60" />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 w-full px-4 xl:px-0 py-32">
-          <div className="max-w-6xl mx-auto">
-            <div className="max-w-2xl space-y-6">
-              <h1 className="text-5xl font-bold text-white md:text-6xl lg:text-7xl">
-                Professional Plant Pathogen Testing
-              </h1>
-              <p className="text-xl text-cream-100 leading-relaxed">
-                Accurate, timely diagnostic services for South African
-                agriculture. Protect your crops with expert pathogen detection
-                and analysis.
-              </p>
-              <div className="flex flex-col gap-4 sm:flex-row pt-4">
-                <Link
-                  href="/pathogen-testing"
-                  className="inline-flex items-center justify-center rounded-md bg-lime-600 px-8 py-4 font-semibold text-white transition-colors hover:bg-lime-700 shadow-lg"
-                >
-                  Our Services
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-md border border-white/30 bg-white/10 backdrop-blur-sm px-8 py-4 font-semibold text-white transition-colors hover:bg-white/20 shadow-lg"
-                >
-                  Get in Touch
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroBanner
+        heading="Professional Plant Pathogen Testing"
+        subheading="Accurate, timely diagnostic services for South African agriculture. Protect your crops with expert pathogen detection and analysis."
+        imageSrc="/images/farming-aerial-4.jpg"
+        alignment="left"
+        mode="dark"
+        overlayOpacity={85}
+        primaryButton={{
+          label: "Our Services",
+          href: "/pathogen-testing",
+        }}
+        secondaryButton={{
+          label: "Get in Touch",
+          href: "/contact",
+        }}
+        minHeight="80vh"
+      />
 
       {/* Features Section */}
       <section className="relative py-20 px-4 xl:px-0 bg-white overflow-hidden">
