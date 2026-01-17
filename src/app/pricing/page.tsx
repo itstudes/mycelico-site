@@ -172,6 +172,7 @@ export default function PricingPage() {
                 <div className="relative z-10 mt-16">
                     <ReadyToGetStarted
                         patternId="pricing-cta"
+                        variant="light"
                         title="Ready to Get Started?"
                         description="Contact us to discuss your testing needs or submit samples for analysis."
                         primaryLabel="Contact Us"

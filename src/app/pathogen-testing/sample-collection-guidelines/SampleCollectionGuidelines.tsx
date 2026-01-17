@@ -101,8 +101,8 @@ export default function SampleCollectionGuidelines() {
                 type="button"
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-4 py-3 text-sm font-medium transition-colors border-b-2 -mb-px ${activeTab === tab.id
-                    ? "border-lime-600 text-lime-700 bg-lime-50"
-                    : "border-transparent text-sage-600 hover:text-sage-900 hover:bg-sage-50"
+                  ? "border-lime-600 text-lime-700 bg-lime-50"
+                  : "border-transparent text-sage-600 hover:text-sage-900 hover:bg-sage-50"
                   }`}
               >
                 {tab.icon}
@@ -123,6 +123,7 @@ export default function SampleCollectionGuidelines() {
         <div className="relative z-10 mt-12">
           <ReadyToGetStarted
             patternId="sample-guidelines-cta"
+            variant="beige"
             title="Ready to Submit Samples?"
             description="Contact us to arrange sample submission or request collection materials."
             primaryLabel="Contact Us"

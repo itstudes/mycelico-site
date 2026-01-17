@@ -198,7 +198,7 @@ export default function PathogenTestingPage() {
                 </div>
 
                 <div className="relative z-10 mt-12">
-                    <ReadyToGetStarted patternId="pathogen-cta-hatching" />
+                    <ReadyToGetStarted patternId="pathogen-cta-hatching" variant="solid" />
                 </div>
             </div>
         </PageWrapper>

@@ -159,6 +159,7 @@ export default function AboutPage() {
                 <div className="relative z-10 mt-8">
                     <ReadyToGetStarted
                         patternId="about-cta"
+                        variant="light"
                         title="Ready to Work Together?"
                         description="Contact us to learn more about how our molecular testing services can benefit your operation."
                         primaryLabel="Get in Touch"

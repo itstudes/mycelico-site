@@ -392,6 +392,7 @@ export default function MarijuanaMontagueCaseStudyPage() {
                     <div className="relative z-10 mt-12">
                         <ReadyToGetStarted
                             patternId="case-study-cta"
+                            variant="light"
                             title="Protect Your Cannabis Cultivation"
                             description="Don't wait for visible symptoms. Implement proactive HLVd testing to protect your investment and ensure consistent quality."
                             primaryLabel="Request Testing"

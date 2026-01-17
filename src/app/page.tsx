@@ -313,6 +313,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <ReadyToGetStarted
             patternId="home-cta"
+            variant="light"
             title="Ready to protect your crops?"
             description="Contact us today to discuss your pathogen testing needs or request a quote for your operation."
             primaryLabel="Contact Us"

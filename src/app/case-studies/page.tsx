@@ -117,6 +117,7 @@ export default function CaseStudiesPage() {
                 <div className="relative z-10 mt-12">
                     <ReadyToGetStarted
                         patternId="case-studies-cta"
+                        variant="light"
                         title="Want Your Success Story Featured?"
                         description="If you've had positive results with our testing services, we'd love to hear about it. Contact us to share your experience."
                         primaryLabel="Contact Us"
