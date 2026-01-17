@@ -1,6 +1,7 @@
 import { HeroBanner } from "@/components/ui/HeroBanner"
 import { ReadyToGetStarted } from "@/components/ui/ReadyToGetStarted"
 import { VerticalDottedLines } from "@/components/ui/VerticalDottedLines"
+import { ZoneGrid } from "@/components/ui/ZoneGrid"
 import Image from "next/image"
 import Link from "next/link"
 import { MycelicoMark } from "../../public/MycelicoMark"
@@ -107,6 +108,41 @@ export default function Home() {
                 Molecular testing for viral diseases to help you identify and
                 manage infections early.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Zone Grid Transition Section */}
+      <section className="relative py-16 px-4 xl:px-0 bg-cream-50 overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
+            <div className="space-y-6 order-2 lg:order-1">
+              <h2 className="text-3xl font-bold text-sage-900 md:text-4xl">
+                Know What&apos;s Happening Across Your Fields
+              </h2>
+              <p className="text-sage-700 leading-relaxed">
+                Early detection is critical. Our testing services help you
+                identify pathogen hotspots before they spread, giving you a
+                clear picture of crop health across your entire operation.
+              </p>
+              <div className="flex flex-wrap gap-4 text-sm">
+                <div className="flex items-center gap-2">
+                  <div className="h-3 w-3 rounded-full bg-lime-500" />
+                  <span className="text-sage-700">Healthy zones</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="h-3 w-3 rounded-full bg-amber-500" />
+                  <span className="text-sage-700">Needs attention</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="h-3 w-3 rounded-full bg-rose-500" />
+                  <span className="text-sage-700">Infection detected</span>
+                </div>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2 flex justify-center">
+              <ZoneGrid />
             </div>
           </div>
         </div>
