@@ -1,15 +1,9 @@
 import { PageWrapper } from "@/components/PageWrapper"
+import { AvailableTestingServices } from "@/components/ui/AvailableTestingServices"
 import { DiagonalHatching } from "@/components/ui/DiagonalHatching"
 import { PathogenOrbit } from "@/components/ui/PathogenOrbit"
 import { ReadyToGetStarted } from "@/components/ui/ReadyToGetStarted"
-import { TestTypeCard } from "@/components/ui/TestTypeCard"
 import { VerticalDottedLines } from "@/components/ui/VerticalDottedLines"
-import {
-    RiBugLine,
-    RiDropLine,
-    RiPlantLine,
-    RiVirusLine,
-} from "@remixicon/react"
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
@@ -48,37 +42,8 @@ export default function PathogenTestingPage() {
                     </div>
                 </div>
 
-                {/* Testing Types - StickerCard style */}
-                <div className="relative z-10 mt-12">
-                    <h2 className="text-2xl font-semibold text-sage-900 mb-6">
-                        Available Testing Services
-                    </h2>
-                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                        <TestTypeCard
-                            Icon={RiVirusLine}
-                            title="HLVd Testing"
-                            description="Hop Latent Viroid detection for any crop type. Identify infections early before they spread."
-                        />
-                        <TestTypeCard
-                            Icon={RiDropLine}
-                            title="Phytophthora"
-                            description="Water mould pathogen testing for root rot and crown rot diseases."
-                            comingSoon
-                        />
-                        <TestTypeCard
-                            Icon={RiPlantLine}
-                            title="Pythium"
-                            description="Root rot and damping-off disease detection for seedlings and mature plants."
-                            comingSoon
-                        />
-                        <TestTypeCard
-                            Icon={RiBugLine}
-                            title="Fusarium"
-                            description="Fusarium wilt and root rot testing across a range of crop species."
-                            comingSoon
-                        />
-                    </div>
-                </div>
+                {/* Testing Types - From Config */}
+                <AvailableTestingServices />
 
                 {/* Lab Process Section with Images */}
                 <div className="relative z-10 mt-16">

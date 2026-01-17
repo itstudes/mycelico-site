@@ -1,3 +1,4 @@
+import { AvailableTestingServices } from "@/components/ui/AvailableTestingServices"
 import { HeroBanner } from "@/components/ui/HeroBanner"
 import { ReadyToGetStarted } from "@/components/ui/ReadyToGetStarted"
 import { StickerCard } from "@/components/ui/StickerCard"
@@ -255,6 +256,14 @@ export default function Home() {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Available Testing Services Section */}
+      <section className="relative py-20 px-4 xl:px-0 bg-cream-50 overflow-hidden">
+        <VerticalDottedLines />
+        <div className="max-w-6xl mx-auto relative z-10">
+          <AvailableTestingServices />
         </div>
       </section>
 
