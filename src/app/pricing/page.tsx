@@ -3,9 +3,19 @@ import type { Metadata } from "next"
 import { PricingContent } from "./PricingContent"
 
 export const metadata: Metadata = {
-    title: "Pricing | Mycelico",
+    title: "Plant Pathogen Testing Pricing South Africa | From R400 per Sample",
     description:
-        "Transparent pricing for plant pathogen testing services. Starting from R450 per sample with 5-10 day turnaround. Enterprise solutions available for commercial operations.",
+        "Transparent, affordable pricing for plant pathogen testing in South Africa. HLVd testing from R400 per sample. Fusarium, Phytophthora, Pythium testing available. 5-10 business day turnaround. Enterprise volume pricing for commercial cannabis, fruit, and vegetable producers. No hidden fees.",
+    keywords: [
+        "HLVd testing price",
+        "pathogen testing cost South Africa",
+        "plant testing pricing",
+        "cannabis testing cost",
+        "affordable pathogen testing",
+        "laboratory testing rates",
+        "Fusarium testing price",
+        "Phytophthora testing cost",
+    ],
 }
 
 export default function PricingPage() {

@@ -223,7 +223,7 @@ function LeafSampleGuide() {
             description="Clearly label each sample with the date, plant identifier, location, and any relevant notes about symptoms observed. Store samples in a cool location until shipping."
             tips={[
               "Store at 4°C (refrigerator) if not shipping immediately",
-              "Never freeze leaf samples—this damages cell structure",
+              "Do not freeze leaf samples. This damages cell structure",
               "Ship samples within 48 hours of collection",
             ]}
           />
@@ -307,7 +307,7 @@ function SoilSampleGuide() {
             title="Collect the Sample"
             description="Remove surface debris and organic matter. Insert your trowel or probe to a depth of 5-20cm (root zone depth). Collect approximately 200-500g of soil per sample."
             tips={[
-              "Include fine roots if possible—they often harbour pathogens",
+              "Include fine roots if possible. They often harbour pathogens",
               "Mix sub-samples thoroughly in a clean bucket",
               "Remove large stones and debris but keep fine organic matter",
             ]}
@@ -393,7 +393,7 @@ function WaterSampleGuide() {
             title="Prepare Your Equipment"
             description="Gather sterile collection bottles (we can provide these), disposable gloves, a permanent marker, and a cooler with ice packs for transport."
             tips={[
-              "Use only sterile or new bottles—never reuse containers",
+              "Use only sterile or new bottles. Never reuse containers",
               "Rinse new bottles three times with the water to be sampled",
               "Prepare labels in advance",
             ]}

@@ -10,16 +10,45 @@ import {
   RiMoneyDollarCircleFill,
   RiShieldCheckFill,
 } from "@remixicon/react"
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Plant Pathogen Testing Services South Africa | HLVd, Fusarium, Phytophthora | Mycelico",
+  description:
+    "Professional molecular plant pathogen testing laboratory in South Africa. HLVd viroid testing, Fusarium, Phytophthora, and Pythium diagnostics. Fast turnaround, accurate results for cannabis, fruit, vegetable, and field crop producers. Serving Western Cape, Eastern Cape, and nationwide.",
+  keywords: [
+    "plant pathogen testing South Africa",
+    "HLVd testing",
+    "Hop Latent Viroid",
+    "cannabis testing South Africa",
+    "Fusarium testing",
+    "Phytophthora detection",
+    "Pythium testing",
+    "crop disease diagnostics",
+    "molecular plant testing",
+    "agricultural laboratory South Africa",
+    "pathogen detection Western Cape",
+    "plant disease testing Mossel Bay",
+    "viroid testing cannabis",
+    "root rot testing",
+    "crop health diagnostics",
+  ],
+  openGraph: {
+    title: "Plant Pathogen Testing South Africa | Mycelico Laboratory",
+    description:
+      "Professional molecular diagnostics for South African agriculture. HLVd, Fusarium, Phytophthora testing. Fast, accurate, affordable.",
+  },
+}
 
 export default function Home() {
   return (
     <main className="relative mx-auto flex flex-col">
       {/* Hero Section with Background Image */}
       <HeroBanner
-        heading="Professional Plant Pathogen Testing"
-        subheading="Accurate, timely diagnostic services for South African agriculture. Protect your crops with expert pathogen detection and analysis."
+        heading="Plant Pathogen Testing for South African Growers"
+        subheading="Lab testing services that identify crop diseases before they destroy your harvest. We test for HLVd, Fusarium, Phytophthora, and Pythium. Fast results. Reliable diagnostics. Affordable pricing."
         imageSrc="/images/farming-aerial-4.jpg"
         alignment="left"
         mode="dark"
@@ -42,23 +71,23 @@ export default function Home() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             <StickerCard
               Icon={RiMicroscopeFill}
-              title="Microbiology Testing Services"
-              description="Accurate molecular diagnostics for fungi, bacteria, and viroids."
+              title="Lab Testing Services"
+              description="We test for plant pathogens using proven molecular techniques. Get clear results you can act on."
             />
             <StickerCard
               Icon={RiLightbulbFlashFill}
-              title="Actionable Insights"
-              description="Clear, decision‑ready reports that guide crop management."
+              title="Disease Detection"
+              description="Identify infections before symptoms appear. Early detection saves crops and money."
             />
             <StickerCard
               Icon={RiMoneyDollarCircleFill}
-              title="High ROI"
-              description="Prevent losses and optimise inputs with targeted testing."
+              title="Affordable Testing"
+              description="Professional diagnostics without premium prices. Protect your operation without breaking the budget."
             />
             <StickerCard
               Icon={RiShieldCheckFill}
-              title="Proactive Detection"
-              description="Detect problems early to protect yield and quality."
+              title="Fast Results"
+              description="Get test results within 5-10 business days. Make quick decisions to protect your crops."
             />
           </div>
         </div>
@@ -70,12 +99,12 @@ export default function Home() {
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="space-y-6 order-2 lg:order-1">
               <h2 className="text-3xl font-bold text-sage-900 md:text-4xl">
-                Know What&apos;s Happening Across Your Fields
+                Know Your Crop Health Status
               </h2>
               <p className="text-sage-700 leading-relaxed">
-                Early detection is critical. Our testing services help you
-                identify pathogen hotspots before they spread, giving you a
-                clear picture of crop health across your entire operation.
+                Pathogen diseases spread fast and damage crops silently. Our testing helps you catch problems early.
+                Test plants across your fields to identify disease hotspots before they spread to healthy zones.
+                This simple step lets you take targeted action instead of guessing.
               </p>
               <div className="flex flex-wrap gap-4 text-sm">
                 <div className="flex items-center gap-2">
@@ -120,19 +149,17 @@ export default function Home() {
             </div>
             <div className="space-y-6 order-1 lg:order-2">
               <h2 className="text-3xl font-bold text-sage-900 md:text-4xl">
-                Precision Diagnostics at the Molecular Level
+                How Our Testing Works
               </h2>
               <p className="text-sage-700 leading-relaxed">
-                Our laboratory uses advanced molecular techniques to detect
-                pathogens with exceptional accuracy. By analysing at the
-                cellular level, we can identify infections before visible
-                symptoms appear—giving you the early warning you need to protect
-                your crops.
+                We use PCR (polymerase chain reaction) and other molecular lab techniques to detect
+                pathogens at the DNA level. This method catches infections before plants show any visible symptoms.
+                We can identify HLVd viroids, Fusarium wilt, Phytophthora root rot, and Pythium diseases
+                with accuracy that protects your cannabis, fruit, vegetable, or field crops.
               </p>
               <p className="text-sage-700 leading-relaxed">
-                From viroids like HLVd to fungal and bacterial pathogens, our
-                testing services provide the clarity you need for informed
-                decision-making.
+                You get clear results and actionable recommendations. No guesswork. Just solid science
+                to help you make confident decisions about crop health and treatment.
               </p>
               <Link
                 href="/pathogen-testing"
@@ -163,7 +190,7 @@ export default function Home() {
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-sage-900 md:text-4xl">
-                Why Choose Mycelico
+                Why Choose Our Testing Service
               </h2>
               <div className="space-y-4">
                 <div className="flex gap-4">
@@ -184,11 +211,11 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-sage-900 mb-1">
-                      Fast Turnaround
+                      Fast Results
                     </h3>
                     <p className="text-sage-700">
-                      Get results when you need them to make timely crop
-                      management decisions.
+                      Get test results within 5 to 10 business days. Quick turnaround means you can respond to
+                      crop problems immediately.
                     </p>
                   </div>
                 </div>
@@ -210,11 +237,11 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-sage-900 mb-1">
-                      Local Expertise
+                      Based in South Africa
                     </h3>
                     <p className="text-sage-700">
-                      Based in South Africa, we understand the pathogen
-                      challenges facing local producers.
+                      We are located in Mossel Bay, Western Cape. We understand the specific crop diseases that
+                      affect South African farms and gardens.
                     </p>
                   </div>
                 </div>
@@ -236,11 +263,11 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-sage-900 mb-1">
-                      Reliable Results
+                      Accurate Testing
                     </h3>
                     <p className="text-sage-700">
-                      Proven diagnostic methods ensure accurate, actionable
-                      information for your operation.
+                      We use proven PCR lab methods to identify plant diseases accurately. Our results are reliable
+                      so you can make confident decisions.
                     </p>
                   </div>
                 </div>
@@ -273,8 +300,8 @@ export default function Home() {
           <ReadyToGetStarted
             patternId="home-cta"
             variant="light"
-            title="Ready to protect your crops?"
-            description="Contact us today to discuss your pathogen testing needs or request a quote for your operation."
+            title="Ready to Test Your Crops?"
+            description="Get accurate pathogen testing from our Mossel Bay laboratory. We test for HLVd, Fusarium, Phytophthora, and Pythium. Send samples, get clear results in 5-10 days, and protect your harvest."
             primaryLabel="Contact Us"
             primaryHref="/contact"
             secondaryLabel="View Pricing"

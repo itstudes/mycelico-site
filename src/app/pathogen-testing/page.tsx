@@ -9,9 +9,23 @@ import Image from "next/image"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-    title: "Pathogen Testing Services | Mycelico",
+    title: "Plant Pathogen Testing Services South Africa | HLVd, Fusarium, Phytophthora, Pythium",
     description:
-        "Accurate plant pathogen testing for South African agriculture. HLVd testing available now. Phytophthora, Pythium, and Fusarium testing coming soon.",
+        "Comprehensive plant pathogen testing laboratory in South Africa. Molecular diagnostics for HLVd (Hop Latent Viroid), Fusarium wilt, Phytophthora root rot, Pythium damping-off. Serving cannabis growers, fruit producers, vegetable farmers, and field crop operations across Western Cape, Eastern Cape, and South Africa. Fast 5-10 day turnaround.",
+    keywords: [
+        "HLVd testing South Africa",
+        "Hop Latent Viroid detection",
+        "Fusarium wilt testing",
+        "Phytophthora root rot",
+        "Pythium damping-off",
+        "cannabis pathogen testing",
+        "plant disease laboratory",
+        "molecular diagnostics agriculture",
+        "crop pathogen detection",
+        "viroid testing",
+        "fungal pathogen testing",
+        "Western Cape laboratory",
+    ],
 }
 
 export default function PathogenTestingPage() {
@@ -24,13 +38,13 @@ export default function PathogenTestingPage() {
                 <div className="relative z-10 grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
                     <div className="space-y-4">
                         <h1 className="text-4xl font-bold text-sage-900 md:text-5xl">
-                            Pathogen Testing Services
+                            Plant Pathogen Testing
                         </h1>
                         <p className="text-lg text-sage-700 max-w-xl">
-                            Molecular diagnostic services for South African agricultural
-                            producers. We use advanced laboratory techniques to provide
-                            accurate, timely results that help you make informed decisions about
-                            crop health management.
+                            Molecular diagnostic laboratory services for local South African agricultural
+                            producers. We use advanced PCR and molecular techniques to provide
+                            accurate, timely results for HLVd, Fusarium, Phytophthora, and Pythium detection.
+                            Based in Mossel Bay, serving growers across Western Cape, Eastern Cape, and nationwide.
                         </p>
                     </div>
                     <div className="relative hidden lg:flex items-center justify-center h-80">
@@ -91,8 +105,8 @@ export default function PathogenTestingPage() {
                                             Laboratory Analysis
                                         </h3>
                                         <p className="text-sage-600">
-                                            Our team uses advanced molecular techniques to identify
-                                            pathogens accurately.
+                                            Our Mossel Bay laboratory uses PCR and molecular diagnostics to identify
+                                            HLVd, Fusarium, Phytophthora, and Pythium with high accuracy.
                                         </p>
                                     </div>
                                 </div>
@@ -105,8 +119,8 @@ export default function PathogenTestingPage() {
                                             Results & Insights
                                         </h3>
                                         <p className="text-sage-600">
-                                            Receive clear, visual reports that empower you to make
-                                            informed decisions about your operation.
+                                            Receive detailed reports within 5-10 business days with
+                                            clear visual results and actionable disease management recommendations.
                                         </p>
                                     </div>
                                 </div>
@@ -134,7 +148,7 @@ export default function PathogenTestingPage() {
                             </h2>
                             <p className="text-cream-100 leading-relaxed">
                                 Our advanced RT-PCR and molecular analysis techniques detect
-                                pathogens at the cellular level—often before visible symptoms
+                                pathogens at the cellular level. They work often before visible symptoms
                                 appear. This early detection is crucial for preventing the
                                 spread of disease through your operation.
                             </p>

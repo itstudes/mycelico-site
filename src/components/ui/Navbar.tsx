@@ -130,7 +130,7 @@ export function NavBar() {
             className="hidden h-10 font-semibold sm:block"
             asChild
           >
-            <Link href="/contact">Get a quote</Link>
+            <Link href="/contact">Contact Us</Link>
           </Button>
           <Button
             onClick={() => setOpen(!open)}
@@ -192,7 +192,7 @@ export function NavBar() {
             )}
           </ul>
           <Button variant="secondary" className="text-lg" asChild>
-            <Link href="/contact">Get a quote</Link>
+            <Link href="/contact">Contact Us</Link>
           </Button>
         </nav>
       </div>

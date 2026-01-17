@@ -12,9 +12,19 @@ import type { Metadata } from "next"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-    title: "About Mycelico | Plant & Microbial Biotechnology",
+    title: "About Mycelico | Plant Pathogen Testing Laboratory Mossel Bay South Africa",
     description:
-        "Mycelico is a South African plant and microbial biotechnology company providing affordable disease testing and environmental analysis using molecular laboratory services.",
+        "Mycelico is a South African plant and microbial biotechnology laboratory based in Mossel Bay, Western Cape. MSc-qualified team with 10+ years experience in molecular diagnostics, plant pathology, and viroid detection. Providing affordable HLVd, Fusarium, Phytophthora, and Pythium testing for cannabis, fruit, vegetable, and field crop producers across South Africa.",
+    keywords: [
+        "Mycelico laboratory",
+        "plant pathology South Africa",
+        "Mossel Bay laboratory",
+        "molecular diagnostics Western Cape",
+        "MSc plant pathologist",
+        "biotechnology South Africa",
+        "agricultural laboratory",
+        "pathogen testing experts",
+    ],
 }
 
 export default function AboutPage() {
@@ -22,8 +32,8 @@ export default function AboutPage() {
         <main className="relative mx-auto flex flex-col">
             {/* Hero Section with Mossel Bay Image */}
             <HeroBanner
-                heading="About Mycelico"
-                subheading="A plant and microbial biotechnology company based in Mossel Bay, South Africa. We provide and innovate laboratory techniques for in-depth molecular analysis services, making modern diagnostic technology accessible to agricultural and environmental operations."
+                heading="About Mycelico Laboratory"
+                subheading="A plant pathology and microbial biotechnology laboratory based in Mossel Bay, Western Cape, South Africa. We specialise in molecular diagnostic services for agricultural producers, offering HLVd viroid testing, Fusarium detection, Phytophthora identification, and Pythium diagnostics. Making professional plant pathogen testing accessible and affordable for South African growers."
                 imageSrc="/images/mossel-bay-1.jpg"
                 alignment="left"
                 mode="dark"
@@ -95,7 +105,7 @@ export default function AboutPage() {
                             </h2>
                             <p className="text-sage-700 leading-relaxed">
                                 Mycelico provides a platform for clients to improve their operations
-                                by accessing—or developing novel—molecular testing services, such as
+                                by accessing or developing novel molecular testing services, such as
                                 disease testing and microbial environmental analysis. We seek to
                                 expose clients to the benefits of modern laboratory techniques by
                                 supplying affordable and effective molecular services.
@@ -143,7 +153,7 @@ export default function AboutPage() {
                                     Client Empowerment
                                 </h3>
                                 <p className="text-sage-600">
-                                    Our goal is to empower you with knowledge—not just data. We help
+                                    Our goal is to empower you with knowledge, not just data. We help
                                     you understand what results mean for your specific operation.
                                 </p>
                             </div>

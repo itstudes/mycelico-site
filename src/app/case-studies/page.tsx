@@ -7,9 +7,18 @@ import Image from "next/image"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-    title: "Case Studies | Mycelico",
+    title: "Plant Pathogen Testing Case Studies | Cannabis HLVd Detection South Africa",
     description:
-        "Real-world examples of how Mycelico's pathogen testing services help South African agricultural producers protect their crops and improve yields.",
+        "Real-world case studies of plant pathogen testing in South Africa. Cannabis HLVd detection in Western Cape, Fusarium testing for fruit crops, Phytophthora identification. See how South African growers use molecular diagnostics to prevent crop losses, improve yields, and manage disease outbreaks.",
+    keywords: [
+        "HLVd case study",
+        "cannabis testing South Africa",
+        "pathogen detection examples",
+        "Western Cape agriculture",
+        "crop disease management",
+        "Montague cannabis",
+        "plant pathogen success stories",
+    ],
 }
 
 interface CaseStudy {

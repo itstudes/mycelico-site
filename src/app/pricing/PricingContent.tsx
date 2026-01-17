@@ -36,11 +36,12 @@ export function PricingContent() {
 
             <div className="space-y-4 text-center relative z-10">
                 <h1 className="text-4xl font-bold text-sage-900 md:text-5xl">
-                    Simple, Transparent Pricing
+                    Plant Pathogen Testing Pricing in South Africa
                 </h1>
                 <p className="mx-auto max-w-2xl text-lg text-sage-700">
-                    Professional pathogen testing services at competitive rates. Choose
-                    the option that best fits your needs.
+                    Transparent, affordable pricing for HLVd, Fusarium, Phytophthora, and Pythium testing.
+                    Professional molecular diagnostics for cannabis, fruit, vegetable, and field crop producers.
+                    No hidden fees. Fast 5-10 day turnaround.
                 </p>
             </div>
 
@@ -58,7 +59,7 @@ export function PricingContent() {
                             Starter
                         </h2>
                         <p className="mb-4 text-sm text-sage-600">
-                            Perfect for home growers and small test batches
+                            Perfect for home growers, small-scale cannabis producers, and individual sample testing
                         </p>
                         <div className="flex items-baseline gap-1">
                             <span className="text-4xl font-bold text-sage-900">
@@ -110,7 +111,7 @@ export function PricingContent() {
                             Enterprise
                         </h2>
                         <p className="mb-4 text-sm text-sage-600">
-                            For commercial operations and large-scale testing
+                            For commercial cannabis operations, fruit farms, vegetable producers, and large-scale agricultural testing
                         </p>
                         <div className="flex items-baseline gap-1">
                             <span className="text-4xl font-bold text-sage-900">Custom</span>

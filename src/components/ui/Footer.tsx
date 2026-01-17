@@ -9,6 +9,7 @@ const Footer = () => {
       title: "Services",
       items: [
         { label: "Pathogen Testing", href: "/pathogen-testing" },
+        { label: "Sample Collection", href: "/pathogen-testing/sample-collection-guidelines" },
         { label: "Pricing", href: "/pricing" },
       ],
     },
@@ -16,6 +17,7 @@ const Footer = () => {
       title: "Company",
       items: [
         { label: "About", href: "/about" },
+        { label: "Case Studies", href: "/case-studies" },
         { label: "Contact", href: "/contact" },
       ],
     },

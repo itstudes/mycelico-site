@@ -109,7 +109,7 @@ export default function MarijuanaMontagueCaseStudyPage() {
                                 <p className="text-sage-700 leading-relaxed">
                                     The growers, who have chosen to remain anonymous, were
                                     experiencing symptoms consistent with Hop Latent Viroid (HLVd)
-                                    infection—a devastating pathogen that can reduce cannabinoid
+                                    infection. A devastating pathogen that can reduce cannabinoid
                                     content by up to 50% and significantly impact plant vigour.
                                 </p>
                                 <p className="text-sage-700 leading-relaxed">

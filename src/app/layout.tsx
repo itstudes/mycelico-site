@@ -22,14 +22,20 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: [
-    "plant pathogen testing",
-    "agriculture",
-    "South Africa",
-    "crop disease",
-    "fungal pathogens",
-    "bacterial disease",
-    "viral infection",
-    "laboratory testing",
+    "plant pathogen testing South Africa",
+    "HLVd testing",
+    "Hop Latent Viroid",
+    "cannabis pathogen testing",
+    "Fusarium wilt testing",
+    "Phytophthora root rot",
+    "Pythium damping-off",
+    "molecular plant diagnostics",
+    "crop disease laboratory",
+    "agricultural testing Western Cape",
+    "plant disease detection",
+    "viroid testing South Africa",
+    "pathogen laboratory Mossel Bay",
+    "cannabis testing South Africa",
     "agricultural diagnostics",
   ],
   authors: [
@@ -62,8 +68,58 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  // Structured data for SEO
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Mycelico",
+    "url": "https://mycelico.co.za",
+    "logo": "https://mycelico.co.za/logo-full.png",
+    "description": "Professional plant pathogen testing laboratory in South Africa specialising in HLVd, Fusarium, Phytophthora, and Pythium diagnostics",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mossel Bay",
+      "addressRegion": "Western Cape",
+      "addressCountry": "ZA"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "info@mycelico.co.za",
+      "contactType": "Customer Service"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "South Africa"
+    }
+  }
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Plant Pathogen Testing",
+    "provider": {
+      "@type": "Organization",
+      "name": "Mycelico"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "South Africa"
+    },
+    "description": "Molecular diagnostic testing for plant pathogens including HLVd, Fusarium, Phytophthora, and Pythium"
+  }
+
   return (
     <html lang="en" className={raleway.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        />
+      </head>
       <body
         className={`${raleway.className} min-h-screen overflow-x-hidden scroll-auto bg-cream-50 antialiased selection:bg-lime-100 selection:text-lime-800`}
       >

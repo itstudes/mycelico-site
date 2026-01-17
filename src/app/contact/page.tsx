@@ -4,9 +4,17 @@ import { VerticalDottedLines } from "@/components/ui/VerticalDottedLines"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Contact Mycelico | Get in Touch",
+    title: "Contact Mycelico | Plant Pathogen Testing Enquiries South Africa",
     description:
-        "Contact Mycelico for plant pathogen testing services. We're here to answer your questions and help with your testing needs.",
+        "Contact Mycelico laboratory for plant pathogen testing services in South Africa. Enquiries for HLVd, Fusarium, Phytophthora, and Pythium testing. Located in Mossel Bay, Western Cape. Email info@mycelico.co.za or use our contact form for cannabis, fruit, vegetable, and field crop pathogen testing.",
+    keywords: [
+        "contact pathogen testing",
+        "plant testing enquiries",
+        "HLVd testing quote",
+        "Mycelico Mossel Bay",
+        "pathogen laboratory contact",
+        "South Africa plant testing",
+    ],
 }
 
 export default function ContactPage() {
@@ -17,10 +25,11 @@ export default function ContactPage() {
 
                 <div className="relative z-10 space-y-4 text-center">
                     <h1 className="text-4xl font-bold text-sage-900 md:text-5xl">
-                        Get in Touch
+                        Contact Mycelico Pathogen Testing Laboratory
                     </h1>
                     <p className="text-lg text-sage-700">
-                        Have questions about our testing services? We&apos;re here to help.
+                        Get in touch for HLVd, Fusarium, Phytophthora, and Pythium testing enquiries.
+                        We&apos;re here to help South African growers with professional plant pathogen diagnostics.
                     </p>
                 </div>
 
