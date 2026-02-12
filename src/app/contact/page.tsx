@@ -28,8 +28,8 @@ export default function ContactPage() {
                         Contact Mycelico Pathogen Testing Laboratory
                     </h1>
                     <p className="text-lg text-sage-700">
-                        Get in touch for HLVd, Fusarium, Phytophthora, and Pythium testing enquiries.
-                        We&apos;re here to help South African growers with professional plant pathogen diagnostics.
+                        Get in touch for testing enquiries.
+                        We&apos;re here to help growers with professional plant pathogen diagnostics.
                     </p>
                 </div>
 
@@ -45,10 +45,10 @@ export default function ContactPage() {
                                         Email
                                     </h3>
                                     <a
-                                        href="mailto:info@mycelico.co.za"
+                                        href="mailto:connal@myceli.co"
                                         className="text-lime-700 hover:text-lime-800 transition-colors"
                                     >
-                                        info@mycelico.co.za
+                                        connal@myceli.co
                                     </a>
                                 </div>
                                 <div>
@@ -56,10 +56,10 @@ export default function ContactPage() {
                                         Phone
                                     </h3>
                                     <a
-                                        href="tel:+27123456789"
+                                        href="tel:+27743665607"
                                         className="text-sage-900 hover:text-sage-700 transition-colors"
                                     >
-                                        +27 12 345 6789
+                                        +27 74 366 5607
                                     </a>
                                 </div>
                                 <div>

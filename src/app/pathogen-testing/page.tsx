@@ -40,11 +40,12 @@ export default function PathogenTestingPage() {
                         <h1 className="text-4xl font-bold text-sage-900 md:text-5xl">
                             Plant Pathogen Testing
                         </h1>
-                        <p className="text-lg text-sage-700 max-w-xl">
-                            Molecular diagnostic laboratory services for local South African agricultural
-                            producers. We use advanced PCR and molecular techniques to provide
-                            accurate, timely results for HLVd, Fusarium, Phytophthora, and Pythium detection.
-                            Based in Mossel Bay, serving growers across Western Cape, Eastern Cape, and nationwide.
+                        <p className="max-w-xl text-lg text-sage-700">
+                            We apply tailored molecular and microbial techniques to accurately and timely detect
+                            the presence of disease, delivering clear results you can act on with confidence.
+                            We are focused primarily on supporting South African agriculture, with
+                            laboratory services tailored to local growing conditions and disease pressures.
+                            We also welcome international clients for competitive high-quality testing services.
                         </p>
                     </div>
                     <div className="relative hidden lg:flex items-center justify-center h-80">
@@ -93,6 +94,7 @@ export default function PathogenTestingPage() {
                                         <p className="text-sage-600">
                                             Follow our sampling guidelines to collect representative
                                             samples from affected plants.
+                                            Then ship the samples to our laboratory for analysis.
                                         </p>
                                     </div>
                                 </div>
@@ -105,8 +107,8 @@ export default function PathogenTestingPage() {
                                             Laboratory Analysis
                                         </h3>
                                         <p className="text-sage-600">
-                                            Our Mossel Bay laboratory uses PCR and molecular diagnostics to identify
-                                            HLVd, Fusarium, Phytophthora, and Pythium with high accuracy.
+                                            Our laboratory uses various molecular and microbial techniques to identify
+                                            plant pathogens and disease with high accuracy.
                                         </p>
                                     </div>
                                 </div>
@@ -130,7 +132,7 @@ export default function PathogenTestingPage() {
                 </div>
 
                 {/* Cellular Image Section */}
-                <div className="relative z-10 mt-16 rounded-xl overflow-hidden">
+                {/* <div className="relative z-10 mt-16 rounded-xl overflow-hidden">
                     <div className="absolute inset-0">
                         <Image
                             src="/images/cellular-2.jpg"
@@ -158,7 +160,7 @@ export default function PathogenTestingPage() {
                         </div>
                         <div className="hidden md:block" />
                     </div>
-                </div>
+                </div> */}
 
                 <div className="relative z-10 mt-12 rounded-lg border border-sage-200 bg-white p-6">
                     <h2 className="text-xl font-semibold text-sage-900 mb-3">

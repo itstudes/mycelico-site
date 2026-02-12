@@ -67,8 +67,7 @@ export default function SampleCollectionGuidelines() {
           </h1>
           <p className="text-lg text-sage-700 max-w-3xl">
             Proper sample collection is critical for accurate pathogen
-            detection. Follow these guidelines to ensure your samples arrive in
-            optimal condition for testing.
+            detection. We have provided guidelines to help you collect samples correctly.
           </p>
         </header>
 
@@ -114,7 +113,7 @@ export default function SampleCollectionGuidelines() {
 
         {/* Tab Content */}
         <div className="relative z-10">
-          {activeTab === "leaf" && <LeafSampleGuide />}
+          {activeTab === "leaf" && <PlantMaterialSampleGuide />}
           {activeTab === "soil" && <SoilSampleGuide />}
           {activeTab === "water" && <WaterSampleGuide />}
         </div>
@@ -137,18 +136,18 @@ export default function SampleCollectionGuidelines() {
   )
 }
 
-function LeafSampleGuide() {
+function PlantMaterialSampleGuide() {
   return (
     <div className="space-y-8">
       {/* Overview */}
       <div className="rounded-lg border border-sage-200 bg-white p-6">
         <h2 className="text-xl font-semibold text-sage-900 mb-4">
-          Leaf Sample Collection Overview
+          Plant Material Sample Collection Overview
         </h2>
         <p className="text-sage-700 mb-4">
-          Leaf samples are the most common sample type for detecting plant
+          Plant material samples are the most common sample type for detecting plant
           pathogens including viroids, fungi, and bacteria. Fresh, properly
-          collected leaf tissue provides the best results for molecular testing.
+          collected plant tissue provides the best results for molecular testing.
         </p>
         <div className="grid sm:grid-cols-3 gap-4 text-sm">
           <div className="rounded-lg bg-sage-50 p-4">
@@ -178,7 +177,7 @@ function LeafSampleGuide() {
             title="Prepare Your Equipment"
             description="Gather clean, sealable plastic bags or containers, clean scissors or pruning shears, disposable gloves, and a permanent marker for labelling."
             tips={[
-              "Sterilise cutting tools with 70% isopropyl alcohol between plants",
+              "Sterilise cutting tools between plants (eg. with 70% isopropyl alcohol)",
               "Use new gloves for each sample to prevent cross-contamination",
               "Pre-label bags before collecting to avoid confusion",
             ]}
@@ -186,30 +185,31 @@ function LeafSampleGuide() {
 
           <StepCard
             step={2}
-            title="Select the Right Leaves"
-            description="Choose leaves that best represent the condition you want to test for. For symptomatic plants, select leaves showing early symptoms. For screening healthy plants, select young, fully expanded leaves."
+            title="Select the Right Material"
+            description="Select material that best represent the condition you want to test for. "
             tips={[
               "Avoid dead or heavily damaged tissue",
-              "Include leaves from different parts of the plant if possible",
-              "For HLVd testing, young leaves near growing tips are ideal",
+              "Include leaves and material from a range of plant regions",
+              "Root material may be sampled as well where required",
             ]}
           />
 
           <StepCard
             step={3}
             title="Collect the Sample"
-            description="Using clean scissors or shears, cut 3-5 leaves from the selected plant. Handle the leaves gently to minimise bruising and tissue damage."
+            description="Using clean scissors or shears, cut the material from the selected plant. Handle gently to minimise bruising and tissue damage."
             tips={[
-              "Cut the leaf with a short section of petiole (stem) attached",
-              "Avoid touching the leaf surface with bare hands",
+              "Remove sample material with clean and sterile implements",
+              "Avoid touching the material surfaces with bare hands",
               "Work quickly to prevent wilting",
+              "Take note of the location of the sampled materials for future analysis and reporting",
             ]}
           />
 
           <StepCard
             step={4}
             title="Package the Sample"
-            description="Place the collected leaves in a clean, sealable plastic bag. Gently press out excess air before sealing. Avoid crushing or folding the leaves."
+            description="Place the collected material in a clean, sealable plastic bag. Gently press out excess air before sealing. Avoid crushing or folding the material."
             tips={[
               "Include a slightly damp (not wet) paper towel to maintain humidity",
               "Do not add water directly to the bag",
@@ -223,7 +223,7 @@ function LeafSampleGuide() {
             description="Clearly label each sample with the date, plant identifier, location, and any relevant notes about symptoms observed. Store samples in a cool location until shipping."
             tips={[
               "Store at 4°C (refrigerator) if not shipping immediately",
-              "Do not freeze leaf samples. This damages cell structure",
+              "Do not freeze samples. This damages cell structure",
               "Ship samples within 48 hours of collection",
             ]}
           />
@@ -233,7 +233,7 @@ function LeafSampleGuide() {
       {/* What to Avoid */}
       <AvoidanceCard
         items={[
-          "Collecting wet leaves (wait until dew has dried)",
+          "Collecting wet material (wait until dew has dried)",
           "Using dirty or rusty cutting tools",
           "Mixing samples from different plants in one bag",
           "Leaving samples in direct sunlight or hot vehicles",
