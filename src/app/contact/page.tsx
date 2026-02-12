@@ -1,5 +1,4 @@
 import { PageWrapper } from "@/components/PageWrapper"
-import { DiagonalHatching } from "@/components/ui/DiagonalHatching"
 import { VerticalDottedLines } from "@/components/ui/VerticalDottedLines"
 import type { Metadata } from "next"
 
@@ -25,158 +24,75 @@ export default function ContactPage() {
 
                 <div className="relative z-10 space-y-4 text-center">
                     <h1 className="text-4xl font-bold text-sage-900 md:text-5xl">
-                        Contact Mycelico Pathogen Testing Laboratory
+                        Contact Us
                     </h1>
                     <p className="text-lg text-sage-700">
                         Get in touch for testing enquiries.
-                        We&apos;re here to help growers with professional plant pathogen diagnostics.
+                        We&apos;re here to help!
                     </p>
                 </div>
 
-                <div className="relative z-10 grid gap-8 md:grid-cols-2 mt-12">
-                    <div className="space-y-6">
-                        <div className="rounded-lg border border-sage-200 bg-white p-6 shadow-sm">
-                            <h2 className="text-xl font-semibold text-sage-900 mb-4">
-                                Contact Information
-                            </h2>
-                            <div className="space-y-4">
-                                <div>
-                                    <h3 className="text-sm font-medium text-sage-700 mb-1">
-                                        Email
-                                    </h3>
-                                    <a
-                                        href="mailto:connal@myceli.co"
-                                        className="text-lime-700 hover:text-lime-800 transition-colors"
-                                    >
-                                        connal@myceli.co
-                                    </a>
-                                </div>
-                                <div>
-                                    <h3 className="text-sm font-medium text-sage-700 mb-1">
-                                        Phone
-                                    </h3>
-                                    <a
-                                        href="tel:+27743665607"
-                                        className="text-sage-900 hover:text-sage-700 transition-colors"
-                                    >
-                                        +27 74 366 5607
-                                    </a>
-                                </div>
-                                <div>
-                                    <h3 className="text-sm font-medium text-sage-700 mb-1">
-                                        Location
-                                    </h3>
-                                    <p className="text-sage-900">South Africa</p>
-                                </div>
+                <div className="relative z-10 mt-12 max-w-2xl mx-auto space-y-6">
+                    <div className="rounded-lg border border-sage-200 bg-white p-6 shadow-sm">
+                        <h2 className="text-xl font-semibold text-sage-900 mb-4 text-center">
+                            Contact Information
+                        </h2>
+                        <div className="space-y-4">
+                            <div className="text-center">
+                                <h3 className="text-sm font-medium text-sage-700 mb-1">
+                                    Email
+                                </h3>
+                                <a
+                                    href="mailto:connal@myceli.co"
+                                    className="text-lime-700 hover:text-lime-800 transition-colors"
+                                >
+                                    connal@myceli.co
+                                </a>
                             </div>
-                        </div>
-
-                        <div className="rounded-lg border border-sage-200 bg-white p-6 shadow-sm">
-                            <h2 className="text-xl font-semibold text-sage-900 mb-4">
-                                Business Hours
-                            </h2>
-                            <div className="space-y-2 text-sage-700">
-                                <div className="flex justify-between">
-                                    <span>Monday - Friday</span>
-                                    <span className="font-medium">8:00 - 17:00</span>
-                                </div>
-                                <div className="flex justify-between">
-                                    <span>Saturday</span>
-                                    <span className="font-medium">Closed</span>
-                                </div>
-                                <div className="flex justify-between">
-                                    <span>Sunday</span>
-                                    <span className="font-medium">Closed</span>
-                                </div>
+                            <div className="text-center">
+                                <h3 className="text-sm font-medium text-sage-700 mb-1">
+                                    Phone
+                                </h3>
+                                <a
+                                    href="tel:+27743665607"
+                                    className="text-sage-900 hover:text-sage-700 transition-colors"
+                                >
+                                    +27 74 366 5607
+                                </a>
+                            </div>
+                            <div className="text-center">
+                                <h3 className="text-sm font-medium text-sage-700 mb-1">
+                                    Location
+                                </h3>
+                                <p className="text-sage-900">South Africa</p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="relative rounded-lg border border-sage-200 bg-white p-6 shadow-sm overflow-hidden">
-                        <DiagonalHatching
-                            patternId="contact-hatching"
-                            strokeClass="stroke-sage-100/50"
-                            maskDirection="bottom"
-                        />
-                        <div className="relative z-10">
-                            <h2 className="text-xl font-semibold text-sage-900 mb-4">
-                                Send Us a Message
-                            </h2>
-                            <form className="space-y-4">
-                                <div>
-                                    <label
-                                        htmlFor="name"
-                                        className="block text-sm font-medium text-sage-900 mb-1"
-                                    >
-                                        Name
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        name="name"
-                                        className="w-full rounded-md border border-sage-300 bg-white px-4 py-2 text-sage-900 placeholder-sage-400 focus:border-lime-500 focus:outline-none focus:ring-1 focus:ring-lime-500"
-                                        placeholder="Your name"
-                                    />
-                                </div>
-                                <div>
-                                    <label
-                                        htmlFor="email"
-                                        className="block text-sm font-medium text-sage-900 mb-1"
-                                    >
-                                        Email
-                                    </label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        className="w-full rounded-md border border-sage-300 bg-white px-4 py-2 text-sage-900 placeholder-sage-400 focus:border-lime-500 focus:outline-none focus:ring-1 focus:ring-lime-500"
-                                        placeholder="your.email@example.com"
-                                    />
-                                </div>
-                                <div>
-                                    <label
-                                        htmlFor="phone"
-                                        className="block text-sm font-medium text-sage-900 mb-1"
-                                    >
-                                        Phone (optional)
-                                    </label>
-                                    <input
-                                        type="tel"
-                                        id="phone"
-                                        name="phone"
-                                        className="w-full rounded-md border border-sage-300 bg-white px-4 py-2 text-sage-900 placeholder-sage-400 focus:border-lime-500 focus:outline-none focus:ring-1 focus:ring-lime-500"
-                                        placeholder="+27 12 345 6789"
-                                    />
-                                </div>
-                                <div>
-                                    <label
-                                        htmlFor="message"
-                                        className="block text-sm font-medium text-sage-900 mb-1"
-                                    >
-                                        Message
-                                    </label>
-                                    <textarea
-                                        id="message"
-                                        name="message"
-                                        rows={5}
-                                        className="w-full rounded-md border border-sage-300 bg-white px-4 py-2 text-sage-900 placeholder-sage-400 focus:border-lime-500 focus:outline-none focus:ring-1 focus:ring-lime-500"
-                                        placeholder="Tell us about your testing needs..."
-                                    />
-                                </div>
-                                <button
-                                    type="submit"
-                                    className="w-full rounded-md bg-lime-600 px-6 py-3 font-medium text-white shadow-sm transition-colors hover:bg-lime-700 focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2"
-                                >
-                                    Send Message
-                                </button>
-                            </form>
+                    <div className="rounded-lg border border-sage-200 bg-white p-6 shadow-sm">
+                        <h2 className="text-xl font-semibold text-sage-900 mb-4 text-center">
+                            Business Hours
+                        </h2>
+                        <div className="space-y-2 text-sage-700">
+                            <div className="flex justify-between">
+                                <span>Monday - Friday</span>
+                                <span className="font-medium">8:00 - 17:00</span>
+                            </div>
+                            <div className="flex justify-between">
+                                <span>Saturday</span>
+                                <span className="font-medium">Closed</span>
+                            </div>
+                            <div className="flex justify-between">
+                                <span>Sunday</span>
+                                <span className="font-medium">Closed</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div className="relative z-10 mt-12 rounded-lg bg-cream-100 border border-cream-300 p-6 text-center">
                     <p className="text-sage-700">
-                        Sample submission guidelines and courier information available upon
+                        Sample collection, submission and trusted courier recommendations available upon
                         request.
                     </p>
                 </div>

@@ -17,7 +17,6 @@ const Footer = () => {
       title: "Company",
       items: [
         { label: "About", href: "/about" },
-        { label: "Case Studies", href: "/case-studies" },
         { label: "Contact", href: "/contact" },
       ],
     },

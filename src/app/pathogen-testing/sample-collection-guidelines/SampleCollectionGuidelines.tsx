@@ -8,9 +8,7 @@ import {
   RiAlertLine,
   RiArrowLeftLine,
   RiCheckLine,
-  RiDropLine,
   RiLeafLine,
-  RiPlantLine,
 } from "@remixicon/react"
 import Link from "next/link"
 import { useState } from "react"
@@ -29,16 +27,17 @@ const tabs: TabData[] = [
     label: "Leaf Samples",
     icon: <RiLeafLine className="size-5" />,
   },
-  {
-    id: "soil",
-    label: "Soil Samples",
-    icon: <RiPlantLine className="size-5" />,
-  },
-  {
-    id: "water",
-    label: "Water Samples",
-    icon: <RiDropLine className="size-5" />,
-  },
+  // Hidden for now: Soil and Water samples
+  // {
+  //   id: "soil",
+  //   label: "Soil Samples",
+  //   icon: <RiPlantLine className="size-5" />,
+  // },
+  // {
+  //   id: "water",
+  //   label: "Water Samples",
+  //   icon: <RiDropLine className="size-5" />,
+  // },
 ]
 
 export default function SampleCollectionGuidelines() {
