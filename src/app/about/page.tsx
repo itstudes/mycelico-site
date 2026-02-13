@@ -32,7 +32,7 @@ export default function AboutPage() {
         <main className="relative mx-auto flex flex-col">
             {/* Hero Section with Mossel Bay Image */}
             <HeroBanner
-                heading="About Mycelico Laboratory"
+                heading="About Mycelico"
                 subheading="A plant pathology and microbial biotechnology laboratory based in Mossel Bay, Western Cape, South Africa. We specialise in molecular diagnostic services for agricultural producers, offering various plant-based pathogen testing services. Our goal is to make professional plant pathogen testing accessible and affordable for South African growers."
                 imageSrc="/images/mossel-bay-1.jpg"
                 alignment="left"

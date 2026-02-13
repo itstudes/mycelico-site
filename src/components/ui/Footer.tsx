@@ -1,4 +1,4 @@
-import { RiLinkedinFill, RiMailFill, RiTwitterXFill } from "@remixicon/react"
+import { RiMailFill } from "@remixicon/react"
 import Image from "next/image"
 import Link from "next/link"
 const CURRENT_YEAR = new Date().getFullYear()
@@ -49,7 +49,7 @@ const Footer = () => {
               agriculture.
             </p>
             <div className="flex items-center gap-2">
-              <Link
+              {/* <Link
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -66,9 +66,9 @@ const Footer = () => {
                 aria-label="LinkedIn"
               >
                 <RiLinkedinFill className="size-5" />
-              </Link>
+              </Link> */}
               <Link
-                href="mailto:info@mycelico.co.za"
+                href="mailto:connal@myceli.co"
                 className="rounded-sm p-2 text-sage-700 transition-colors duration-200 hover:bg-sage-100 hover:text-sage-900"
                 aria-label="Email"
               >
