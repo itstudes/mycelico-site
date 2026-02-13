@@ -1,163 +1,161 @@
-import { RiAlertLine, RiCheckLine, RiVirusLine } from "@remixicon/react"
-import Image from "next/image"
+import { RiAlertLine, RiVirusLine } from "@remixicon/react"
+
+type CellStatus = "healthy-far" | "healthy-close" | "caution" | "infected"
 
 interface ZoneCell {
-    /** Position as grid row/col (0-7) */
     row: number
     col: number
-    status: "healthy" | "warning" | "infected"
-    /** Animation delay multiplier for staggered effects */
-    animDelay: number
+    status: CellStatus
 }
 
-// 10 healthy cells, 3 warning, 3 infected = majority healthy
-const zoneCells: ZoneCell[] = [
-    // Healthy cells
-    { row: 1, col: 2, status: "healthy", animDelay: 0 },
-    { row: 0, col: 6, status: "healthy", animDelay: 2.5 },
-    { row: 2, col: 5, status: "healthy", animDelay: 3.8 },
-    { row: 4, col: 1, status: "healthy", animDelay: 2.1 },
-    { row: 6, col: 1, status: "healthy", animDelay: 1.8 },
-    // Warning cells
-    { row: 4, col: 6, status: "warning", animDelay: 4.5 },
-    { row: 5, col: 3, status: "warning", animDelay: 3.1 },
-    // Infected cells   
-    { row: 6, col: 5, status: "infected", animDelay: 1.0 },
-]
+// Generate a full 16x16 heatmap representing pathogen testing across a field
+// Pattern shows clusters of infection spreading from hotspots
+const generateHeatmap = (): ZoneCell[] => {
+    const cells: ZoneCell[] = []
+    const gridSize = 16
 
-function getStatusStyles(status: ZoneCell["status"]) {
+    // Define infection hotspots that will influence surrounding cells
+    const hotspots = [
+        { row: 11, col: 12, intensity: 1 },
+        { row: 4, col: 4, intensity: 0.8 },
+    ]
+
+    for (let row = 0; row < gridSize; row++) {
+        for (let col = 0; col < gridSize; col++) {
+            // Calculate distance to nearest hotspot
+            let minDistance = Infinity
+            let maxIntensity = 0
+
+            hotspots.forEach(hotspot => {
+                const distance = Math.sqrt(
+                    Math.pow(row - hotspot.row, 2) + Math.pow(col - hotspot.col, 2)
+                )
+                if (distance < minDistance) {
+                    minDistance = distance
+                    maxIntensity = hotspot.intensity
+                }
+            })
+
+            // Determine status based on distance from hotspots
+            let status: CellStatus
+            const risk = (maxIntensity * 4) / (minDistance + 1)
+
+            if (risk > 2.5) {
+                status = "infected"
+            } else if (risk > 1.2) {
+                status = "caution"
+            } else if (risk > 0.6) {
+                status = "healthy-close"
+            } else {
+                status = "healthy-far"
+            }
+
+            cells.push({ row, col, status })
+        }
+    }
+
+    return cells
+}
+
+const heatmapCells = generateHeatmap()
+
+function getCellColor(status: CellStatus): string {
     switch (status) {
-        case "healthy":
-            return {
-                glowColor: "rgba(132, 204, 22, 0.4)",
-                icon: <RiCheckLine className="size-4 sm:size-5 text-lime-600" />,
-            }
-        case "warning":
-            return {
-                glowColor: "rgba(251, 191, 36, 0.5)",
-                icon: <RiAlertLine className="size-4 sm:size-5 text-amber-600" />,
-            }
+        case "healthy-far":
+            return "bg-lime-600"
+        case "healthy-close":
+            return "bg-lime-400"
+        case "caution":
+            return "bg-amber-500"
         case "infected":
-            return {
-                glowColor: "rgba(244, 63, 94, 0.5)",
-                icon: <RiVirusLine className="size-4 sm:size-5 text-rose-600" />,
-            }
+            return "bg-rose-500"
+    }
+}
+
+function getCellIcon(status: CellStatus) {
+    switch (status) {
+        case "caution":
+            return <RiAlertLine className="size-3 text-amber-900/40" />
+        case "infected":
+            return <RiVirusLine className="size-3 text-rose-900/40" />
+        default:
+            return null
     }
 }
 
 export function ZoneGrid() {
-    // Grid is 8x8, each cell is 1/8 = 12.5%
-    const cellSize = 12.5
+    const gridSize = 16
+    const columnLabels = "ABCDEFGHIJKLMNOP".split("")
+    const rowLabels = Array.from({ length: gridSize }, (_, i) => (i + 1).toString())
 
     return (
-        <div className="relative flex items-center justify-center overflow-hidden w-full max-w-[432px] aspect-square">
-            {/* Diagonal pattern background */}
-            <svg className="absolute size-full">
-                <defs>
-                    <pattern
-                        id="zone-grid-diagonal-pattern"
-                        patternUnits="userSpaceOnUse"
-                        width="64"
-                        height="64"
-                    >
-                        {Array.from({ length: 17 }, (_, i) => {
-                            const offset = i * 8
-                            return (
-                                <path
-                                    key={i}
-                                    d={`M${-106 + offset} 110L${22 + offset} -18`}
-                                    className="stroke-sage-200/50"
-                                    strokeWidth="1"
-                                />
-                            )
-                        })}
-                    </pattern>
-                </defs>
-                <rect
-                    width="100%"
-                    height="100%"
-                    fill="url(#zone-grid-diagonal-pattern)"
-                />
-            </svg>
+        <div className="relative flex items-center justify-center w-full max-w-[480px]">
+            {/* Container with axis labels */}
+            <div className="relative w-full">
+                {/* Top axis labels */}
+                <div className="flex items-center pb-1">
+                    {/* Empty corner space */}
+                    <div className="w-6 shrink-0" />
+                    {/* Column labels */}
+                    <div className="flex-1 grid grid-cols-16 gap-0">
+                        {columnLabels.map((label) => (
+                            <div
+                                key={label}
+                                className="text-center text-xs font-medium text-sage-600"
+                            >
+                                {label}
+                            </div>
+                        ))}
+                    </div>
+                </div>
 
-            <div className="relative w-full h-full">
-                {/* Grid lines */}
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 432 432"
-                    className="absolute inset-0 w-full h-full"
-                    preserveAspectRatio="xMidYMid meet"
-                    style={{
-                        maskImage:
-                            "linear-gradient(transparent, white 10%, white 90%, transparent)",
-                    }}
-                >
-                    <path
-                        className="stroke-sage-200"
-                        d="M48 0v432M96 0v432M144 0v432M192 0v432M240 0v432M288 0v432M336 0v432M384 0v432M0 48h432M0 96h432M0 144h432M0 192h432M0 240h432M0 288h432M0 336h432M0 384h432"
-                    />
-                </svg>
-
-                <div className="pointer-events-none absolute inset-0 select-none">
-                    {/* Center logo */}
-                    <div
-                        className="absolute flex items-center justify-center"
-                        style={{
-                            top: `${3 * cellSize}%`,
-                            left: `${3 * cellSize}%`,
-                            width: `${2 * cellSize}%`,
-                            height: `${2 * cellSize}%`,
-                        }}
-                    >
-                        <div className="flex h-10 w-10 sm:h-14 sm:w-14 items-center justify-center rounded-sm bg-white ring-1 shadow-md ring-sage-300">
-                            <Image
-                                src="/logo.png"
-                                alt="Mycelico"
-                                width={40}
-                                height={40}
-                                className="h-7 w-7 sm:h-10 sm:w-10"
-                            />
-                        </div>
+                {/* Main grid with left axis */}
+                <div className="flex items-start">
+                    {/* Left axis labels */}
+                    <div className="flex flex-col gap-0 w-6 shrink-0 pr-1">
+                        {rowLabels.map((label) => (
+                            <div
+                                key={label}
+                                className="flex items-center justify-end text-xs font-medium text-sage-600"
+                                style={{ height: `${100 / gridSize}%`, minHeight: '28px' }}
+                            >
+                                {label}
+                            </div>
+                        ))}
                     </div>
 
-                    {/* Zone cells */}
-                    {zoneCells.map((cell, index) => {
-                        const styles = getStatusStyles(cell.status)
-                        return (
-                            <div
-                                key={index}
-                                className="absolute flex items-center justify-center"
-                                style={{
-                                    top: `${cell.row * cellSize}%`,
-                                    left: `${cell.col * cellSize}%`,
-                                    width: `${cellSize}%`,
-                                    height: `${cellSize}%`,
-                                }}
-                            >
-                                <div className="relative">
-                                    {/* Subtle glow effect */}
-                                    <div
-                                        className="absolute -inset-1 rounded-sm opacity-0"
-                                        style={{
-                                            boxShadow: `0 0 12px 4px ${styles.glowColor}`,
-                                            animation: `zoneGlow 4s ease-in-out infinite`,
-                                            animationDelay: `${cell.animDelay}s`,
-                                        }}
-                                    />
-                                    <div
-                                        className="relative flex h-8 w-8 sm:h-12 sm:w-12 items-center justify-center rounded-sm bg-white ring-1 shadow-sm ring-sage-300 transition-transform"
-                                        style={{
-                                            animation: `zoneBreath 5s ease-in-out infinite`,
-                                            animationDelay: `${cell.animDelay}s`,
-                                        }}
-                                    >
-                                        {styles.icon}
-                                    </div>
+                    {/* Heatmap grid container */}
+                    <div className="relative flex-1 aspect-square rounded-lg overflow-hidden shadow-lg border border-sage-300">
+                        <div className="relative w-full h-full grid grid-cols-16 grid-rows-16 gap-0">
+                            {/* Render all cells in the heatmap */}
+                            {heatmapCells.map((cell, index) => (
+                                <div
+                                    key={index}
+                                    className={`${getCellColor(cell.status)} relative transition-colors duration-300 flex items-center justify-center`}
+                                >
+                                    {/* Subtle grid texture overlay */}
+                                    <div className="absolute inset-0 border-r border-b border-sage-300/20" />
+                                    {/* Icon overlay */}
+                                    {getCellIcon(cell.status)}
                                 </div>
-                            </div>
-                        )
-                    })}
+                            ))}
+
+                            {/* Grid lines overlay for map-like appearance */}
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 432 432"
+                                className="absolute inset-0 w-full h-full pointer-events-none"
+                                preserveAspectRatio="none"
+                            >
+                                <path
+                                    className="stroke-sage-400/30"
+                                    strokeWidth="1"
+                                    d="M27 0v432M54 0v432M81 0v432M108 0v432M135 0v432M162 0v432M189 0v432M216 0v432M243 0v432M270 0v432M297 0v432M324 0v432M351 0v432M378 0v432M405 0v432M0 27h432M0 54h432M0 81h432M0 108h432M0 135h432M0 162h432M0 189h432M0 216h432M0 243h432M0 270h432M0 297h432M0 324h432M0 351h432M0 378h432M0 405h432"
+                                />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -27,17 +27,6 @@ const navLinks: NavLink[] = [
       },
     ],
   },
-  {
-    href: "/case-studies",
-    label: "Case Studies",
-    children: [
-      { href: "/case-studies", label: "All Case Studies" },
-      {
-        href: "/case-studies/marijuana-montague-2025",
-        label: "Marijuana in Montague [2025]",
-      },
-    ],
-  },
   { href: "/pricing", label: "Pricing" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },

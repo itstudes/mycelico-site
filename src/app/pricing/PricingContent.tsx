@@ -36,10 +36,10 @@ export function PricingContent() {
 
             <div className="space-y-4 text-center relative z-10">
                 <h1 className="text-4xl font-bold text-sage-900 md:text-5xl">
-                    Plant Pathogen Testing Pricing in South Africa
+                    Pathogen Testing Pricelist
                 </h1>
                 <p className="mx-auto max-w-2xl text-lg text-sage-700">
-                    Transparent, affordable pricing for HLVd, Fusarium, Phytophthora, and Pythium testing.
+                    Transparent, affordable pricing for Hops Latent Viroid (HLVd) with other test options coming soon.
                     Professional molecular diagnostics for cannabis, fruit, vegetable, and field crop producers.
                     No hidden fees. Fast 5-10 day turnaround.
                 </p>

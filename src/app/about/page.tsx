@@ -32,12 +32,12 @@ export default function AboutPage() {
         <main className="relative mx-auto flex flex-col">
             {/* Hero Section with Mossel Bay Image */}
             <HeroBanner
-                heading="About Mycelico Laboratory"
-                subheading="A plant pathology and microbial biotechnology laboratory based in Mossel Bay, Western Cape, South Africa. We specialise in molecular diagnostic services for agricultural producers, offering HLVd viroid testing, Fusarium detection, Phytophthora identification, and Pythium diagnostics. Making professional plant pathogen testing accessible and affordable for South African growers."
+                heading="About Mycelico"
+                subheading="A plant pathology and microbial biotechnology laboratory based in Mossel Bay, Western Cape, South Africa. We specialise in molecular diagnostic services for agricultural producers, offering various plant-based pathogen testing services. Our goal is to make professional plant pathogen testing accessible and affordable for South African growers."
                 imageSrc="/images/mossel-bay-1.jpg"
                 alignment="left"
                 mode="dark"
-                overlayOpacity={70}
+                overlayOpacity={95}
                 primaryButton={{
                     label: "Our Services",
                     href: "/pathogen-testing",

@@ -48,7 +48,7 @@ export default function Home() {
       {/* Hero Section with Background Image */}
       <HeroBanner
         heading="Plant Pathogen Testing for South African Growers"
-        subheading="Lab testing services that identify crop diseases before they destroy your harvest. We test for HLVd, Fusarium, Phytophthora, and Pythium. Fast results. Reliable diagnostics. Affordable pricing."
+        subheading="Disease testing services that identify crop diseases before they destroy your harvest potential. Robust and reliable plant pathogen testing services at affordable prices."
         imageSrc="/images/farming-aerial-4.jpg"
         alignment="left"
         mode="dark"
@@ -72,7 +72,7 @@ export default function Home() {
             <StickerCard
               Icon={RiMicroscopeFill}
               title="Lab Testing Services"
-              description="We test for plant pathogens using proven molecular techniques. Get clear results you can act on."
+              description="We test for plant pathogens using proven molecular testing methods. Get clear results you can act on."
             />
             <StickerCard
               Icon={RiLightbulbFlashFill}
@@ -99,12 +99,10 @@ export default function Home() {
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="space-y-6 order-2 lg:order-1">
               <h2 className="text-3xl font-bold text-sage-900 md:text-4xl">
-                Know Your Crop Health Status
+                Understand Your Crop Health
               </h2>
               <p className="text-sage-700 leading-relaxed">
-                Pathogen diseases spread fast and damage crops silently. Our testing helps you catch problems early.
-                Test plants across your fields to identify disease hotspots before they spread to healthy zones.
-                This simple step lets you take targeted action instead of guessing.
+                Diseases spread quickly, and silently destroy crop potential. Routine, thourough testing ensures early detection.
               </p>
               <div className="flex flex-wrap gap-4 text-sm">
                 <div className="flex items-center gap-2">
@@ -152,14 +150,13 @@ export default function Home() {
                 How Our Testing Works
               </h2>
               <p className="text-sage-700 leading-relaxed">
-                We use PCR (polymerase chain reaction) and other molecular lab techniques to detect
-                pathogens at the DNA level. This method catches infections before plants show any visible symptoms.
-                We can identify HLVd viroids, Fusarium wilt, Phytophthora root rot, and Pythium diseases
-                with accuracy that protects your cannabis, fruit, vegetable, or field crops.
+                We utilise proven molecular techniuques to directly detect pathogens and visualise results in a way that clients can understand and act on.
               </p>
               <p className="text-sage-700 leading-relaxed">
-                You get clear results and actionable recommendations. No guesswork. Just solid science
-                to help you make confident decisions about crop health and treatment.
+                These techniques are applied to a range of plant diseases from viruses and viroids, to fungi and bacteria.
+              </p>
+              <p className="text-sage-700 leading-relaxed">
+                Sound, simple science to give you the confidence you need for making crucial crop health decisions.
               </p>
               <Link
                 href="/pathogen-testing"
@@ -301,7 +298,7 @@ export default function Home() {
             patternId="home-cta"
             variant="light"
             title="Ready to Test Your Crops?"
-            description="Get accurate pathogen testing from our Mossel Bay laboratory. We test for HLVd, Fusarium, Phytophthora, and Pythium. Send samples, get clear results in 5-10 days, and protect your harvest."
+            description="We test for HLVd. Send samples, get clear results in 5-10 days, and protect your harvest."
             primaryLabel="Contact Us"
             primaryHref="/contact"
             secondaryLabel="View Pricing"
