@@ -4,12 +4,10 @@ import SampleCollectionGuidelines from "./SampleCollectionGuidelines"
 export const metadata: Metadata = {
     title: "Sample Collection Guide | How to Collect Plant Samples for Pathogen Testing",
     description:
-        "Comprehensive guide to collecting plant samples for plant pathogen testing. Step-by-step instructions for leaf, tissue, soil, and water samples. Proper collection techniques ensure accurate laboratory results. Storage, packaging, and shipping guidelines for South African growers.",
+        "Comprehensive guide to collecting plant samples for pathogen testing. Step-by-step instructions for leaf and plant tissue samples. Proper collection techniques ensure accurate laboratory results. Storage, packaging, and shipping guidelines for South African growers.",
     keywords: [
         "how to collect plant samples",
         "leaf sample collection",
-        "soil sample collection",
-        "water sample pathogen testing",
         "plant pathogen sample collection",
         "HLVd sample collection",
         "cannabis sample collection",

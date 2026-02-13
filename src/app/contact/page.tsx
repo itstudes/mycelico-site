@@ -5,12 +5,12 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
     title: "Contact Mycelico | Plant Pathogen Testing Enquiries South Africa",
     description:
-        "Contact Mycelico laboratory for plant pathogen testing services in South Africa. Enquiries for HLVd, Fusarium, Phytophthora, and Pythium testing. Located in Mossel Bay, Western Cape. Email info@mycelico.co.za or use our contact form for cannabis, fruit, vegetable, and field crop pathogen testing.",
+        "Contact Mycelico laboratory for plant pathogen testing services in South Africa. Enquiries for HLVd, Fusarium, Phytophthora, and Pythium testing. Email connal@myceli.co or call +27 74 366 5607 for cannabis, fruit, vegetable, and field crop pathogen testing.",
     keywords: [
         "contact pathogen testing",
         "plant testing enquiries",
         "HLVd testing quote",
-        "Mycelico Mossel Bay",
+        "Mycelico contact",
         "pathogen laboratory contact",
         "South Africa plant testing",
     ],
@@ -32,7 +32,7 @@ export default function ContactPage() {
                     </p>
                 </div>
 
-                <div className="relative z-10 mt-12 max-w-2xl mx-auto space-y-6">
+                <div className="relative z-10 mt-12 grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
                     <div className="rounded-lg border border-sage-200 bg-white p-6 shadow-sm">
                         <h2 className="text-xl font-semibold text-sage-900 mb-4 text-center">
                             Contact Information

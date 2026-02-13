@@ -1,4 +1,3 @@
-import { RiMailFill } from "@remixicon/react"
 import Image from "next/image"
 import Link from "next/link"
 const CURRENT_YEAR = new Date().getFullYear()
@@ -48,32 +47,21 @@ const Footer = () => {
               Professional plant pathogen testing services for South African
               agriculture.
             </p>
-            <div className="flex items-center gap-2">
-              {/* <Link
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-sm p-2 text-sage-700 transition-colors duration-200 hover:bg-sage-100 hover:text-sage-900"
-                aria-label="Twitter"
-              >
-                <RiTwitterXFill className="size-5" />
-              </Link>
-              <Link
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-sm p-2 text-sage-700 transition-colors duration-200 hover:bg-sage-100 hover:text-sage-900"
-                aria-label="LinkedIn"
-              >
-                <RiLinkedinFill className="size-5" />
-              </Link> */}
-              <Link
-                href="mailto:connal@myceli.co"
-                className="rounded-sm p-2 text-sage-700 transition-colors duration-200 hover:bg-sage-100 hover:text-sage-900"
-                aria-label="Email"
-              >
-                <RiMailFill className="size-5" />
-              </Link>
+            <div className="space-y-2">
+              <div className="flex flex-col gap-1 text-sm text-sage-700">
+                <a
+                  href="mailto:connal@myceli.co"
+                  className="hover:text-sage-900 transition-colors"
+                >
+                  connal@myceli.co
+                </a>
+                <a
+                  href="tel:+27743665607"
+                  className="hover:text-sage-900 transition-colors"
+                >
+                  +27 74 366 5607
+                </a>
+              </div>
             </div>
           </div>
 
