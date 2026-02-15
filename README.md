@@ -1,7 +1,6 @@
-````md
-# Tremor – Solar
+# Mycelico Public Website
 
-`Solar` is a website template from [Tremor](https://tremor.so).  
+The myceli.co public facting website was built using a template from [Tremor](https://tremor.so).  
 It is built using **Next.js** and **Tremor UI components**.
 
 This guide is written for **non-technical users on Windows** and walks you through everything step by step.
