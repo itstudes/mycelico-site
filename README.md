@@ -1,7 +1,7 @@
 # Mycelico Public Website
 
-The myceli.co public facting website was built using a template from [Tremor](https://tremor.so).  
-It is built using **Next.js** and **Tremor UI components**.
+The myceli.co public facing website was built using a design template from [Tremor Blocks](https://tremor.so/blocks).  
+It is built using **Next.js 15**, **React 19**, **TypeScript**, and **Tailwind CSS 4**.
 
 This guide is written for **non-technical users on Windows** and walks you through everything step by step.
 

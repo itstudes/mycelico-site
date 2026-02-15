@@ -2,15 +2,15 @@ import { Button } from "@/components/Button"
 import Link from "next/link"
 import { siteConfig } from "./siteConfig"
 
-import { SolarLogo } from "../../public/SolarLogo"
+import { MycelicoLogo } from "../../public/MycelicoLogo"
 
 export default function NotFound() {
   return (
     <div className="flex h-screen flex-col items-center justify-center">
       <Link href={siteConfig.baseLinks.home}>
-        <SolarLogo className="mt-6 h-10" />
+        <MycelicoLogo className="mt-6 h-10" />
       </Link>
-      <p className="mt-6 text-4xl font-semibold text-amber-600 sm:text-5xl">
+      <p className="mt-6 text-4xl font-semibold text-lime-600 sm:text-5xl">
         Error 404
       </p>
       <h1 className="mt-4 text-2xl font-semibold text-gray-900">
