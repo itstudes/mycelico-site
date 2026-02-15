@@ -110,14 +110,13 @@ export function ZoneGrid() {
                 </div>
 
                 {/* Main grid with left axis */}
-                <div className="flex items-start">
+                <div className="flex">
                     {/* Left axis labels */}
-                    <div className="flex flex-col gap-0 w-6 shrink-0 pr-1">
+                    <div className="flex flex-col justify-between w-6 shrink-0 pr-1 py-px">
                         {rowLabels.map((label) => (
                             <div
                                 key={label}
-                                className="flex items-center justify-end text-xs font-medium text-sage-600"
-                                style={{ height: `${100 / gridSize}%`, minHeight: '28px' }}
+                                className="flex items-center justify-end text-[10px] sm:text-xs font-medium text-sage-600 leading-none"
                             >
                                 {label}
                             </div>

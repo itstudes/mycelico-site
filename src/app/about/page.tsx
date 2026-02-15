@@ -100,7 +100,7 @@ export default function AboutPage() {
                             </div>
                         </div>
                         <div className="prose prose-sage order-1 lg:order-2">
-                            <h2 className="text-2xl font-semibold text-sage-900">
+                            <h2 className="text-2xl font-semibold text-sage-900 mb-4">
                                 The Problem We Solve
                             </h2>
                             <p className="text-sage-700 leading-relaxed">
